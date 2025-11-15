@@ -31,55 +31,59 @@ Objectives:
 
 # Project Category
 This project falls under the category of:
-Web-Based and Mobile Application (Java + PHP + MySQL)
-It is an information management and reminder system.
+- Web-Based and Mobile Application (Java + PHP + MySQL)
+- It is an information management and reminder system.
 
 
 # Front-End and Back-End Technologies
-Frontend:
-•	Java (for app interface – desktop or Android)
-•	HTML, CSS, JavaScript (for web dashboard)
-Backend:
-•	PHP (server-side logic, API handling)
-•	MySQL (database to store users and document data)
-Optional Tools:
-•	PHPMailer (for email reminders)
-•	Tesseract OCR (for reading expiry date automatically from images – optional feature)
+- Frontend:  
+    •	Java (for app interface – desktop or Android)  
+    •	HTML, CSS, JavaScript (for web dashboard)  
+- Backend:  
+    •	PHP (server-side logic, API handling)  
+    •	MySQL (database to store users and document data)  
+- Optional Tools:  
+    •	PHPMailer (for email reminders)  
+    •	Tesseract OCR (for reading expiry date automatically from images – optional feature)   
 
 
 # Minimum System Requirements
-Component	Minimum Requirement
-Processor	Intel Core i3 or equivalent
-RAM	4 GB
-Storage	500 MB free disk space
-Operating System	Windows / Linux / Android
-Software Requirements	JDK 8+, XAMPP/WAMP, PHP 8+, MySQL, Browser
-Optional	Internet connection for email reminders
+Component	                 Minimum Requirement
+Processor	                 Intel Core i3 or equivalent
+RAM	                         4 GB
+Storage	                     500 MB free disk space
+Operating System	         Windows / Linux / Android
+Software Requirements	     JDK 8+, XAMPP/WAMP, PHP 8+, MySQL, Browser
+Optional	                 Internet connection for email reminders
 
 
 
 # Number of Modules and Description
-Module No.	Module Name	Description
-1	User Registration & Login	Users can register with basic details and log in securely.
-2	Add Document Details	Users can add document name, expiry date, category, and upload an image.
-3	Document Storage & Management	All details are stored in the database; users can view, update, or delete entries.
-4	Reminder & Notification Module	The system checks expiry dates and sends notifications or emails before expiry.
-5	Dashboard & Status View	Displays a list of all documents with color indicators: green (valid), yellow (expiring soon), red (expired).
+1. User Registration & Login
+- Users can register with basic details and log in securely.
+2. Add Document Details	
+- Users can add document name, expiry date, category, and upload an image.
+3. Document Storage & Management	
+- All details are stored in the database; users can view, update, or delete entries.
+4. Reminder & Notification Module	
+- The system checks expiry dates and sends notifications or emails before expiry.
+5. Dashboard & Status View	
+- Displays a list of all documents with color indicators: green (valid), yellow (expiring soon), red (expired).
 
 
 
 # Limitations	
-•	The system depends on the accuracy of dates entered by users (manual input).
-•	Email or notification reminders require an active internet connection.
-•	OCR-based auto date reading may not always be 100% accurate (optional feature).
-•	Currently designed for individual use, not for large-scale organizations.
+-	The system depends on the accuracy of dates entered by users (manual input).
+-	Email or notification reminders require an active internet connection.
+-	OCR-based auto date reading may not always be 100% accurate (optional feature).
+-	Currently designed for individual use, not for large-scale organizations.
 
 
 
 # Conclusion
-ReMindMe is a useful and practical project that solves a real-life problem.
-It helps people stay organized and never forget an expiry date again.
-The system is easy to use, reliable, and efficient — combining the simplicity of a reminder app with the smartness of a document manager. 
-This project demonstrates how small digital tools can make daily life more convenient and efficient, especially when built with common technologies like Java, PHP, and MySQL.
+- ReMindMe is a useful and practical project that solves a real-life problem.
+- It helps people stay organized and never forget an expiry date again.
+- The system is easy to use, reliable, and efficient — combining the simplicity of a reminder app with the smartness of a document manager. 
+- This project demonstrates how small digital tools can make daily life more convenient and efficient, especially   when built with common technologies like Java, PHP, and MySQL.
 
 
