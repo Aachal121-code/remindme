@@ -48,13 +48,19 @@ This project falls under the category of:
 
 
 # Minimum System Requirements
-Component	                 Minimum Requirement
-Processor	                 Intel Core i3 or equivalent
-RAM	                         4 GB
-Storage	                     500 MB free disk space
-Operating System	         Windows / Linux / Android
-Software Requirements	     JDK 8+, XAMPP/WAMP, PHP 8+, MySQL, Browser
-Optional	                 Internet connection for email reminders
+- Component and Minimum Requirement
+1. Processor	                
+- Intel Core i3 or equivalent
+2. RAM	  
+- 4 GB
+3. Storage	                    
+- 500 MB free disk space
+4. Operating System	        
+- Windows / Linux / Android
+5. Software Requirements	     
+- JDK 8+, XAMPP/WAMP, PHP 8+, MySQL, Browser
+6. Optional	                
+- Internet connection for email reminders
 
 
 
