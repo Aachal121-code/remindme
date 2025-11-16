@@ -50,31 +50,31 @@ This project falls under the category of:
 # Minimum System Requirements
 - Component and Minimum Requirement
 1. Processor	                
-- Intel Core i3 or equivalent
+    - Intel Core i3 or equivalent
 2. RAM	  
-- 4 GB
+    - 4 GB
 3. Storage	                    
-- 500 MB free disk space
+    - 500 MB free disk space
 4. Operating System	        
-- Windows / Linux / Android
+    - Windows / Linux / Android
 5. Software Requirements	     
-- JDK 8+, XAMPP/WAMP, PHP 8+, MySQL, Browser
+    - JDK 8+, XAMPP/WAMP, PHP 8+, MySQL, Browser
 6. Optional	                
-- Internet connection for email reminders
+    - Internet connection for email reminders
 
 
 
 # Number of Modules and Description
 1. User Registration & Login
-- Users can register with basic details and log in securely.
+    - Users can register with basic details and log in securely.
 2. Add Document Details	
-- Users can add document name, expiry date, category, and upload an image.
+    - Users can add document name, expiry date, category, and upload an image.
 3. Document Storage & Management	
-- All details are stored in the database; users can view, update, or delete entries.
+    - All details are stored in the database; users can view, update, or delete entries.
 4. Reminder & Notification Module	
-- The system checks expiry dates and sends notifications or emails before expiry.
+    - The system checks expiry dates and sends notifications or emails before expiry.
 5. Dashboard & Status View	
-- Displays a list of all documents with color indicators: green (valid), yellow (expiring soon), red (expired).
+    - Displays a list of all documents with color indicators: green (valid), yellow (expiring soon), red (expired).
 
 
 
