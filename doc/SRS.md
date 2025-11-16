@@ -42,20 +42,41 @@ The system allows users to maintain document records and receive alerts before e
 ## **5. System Requirements**
 
 ### **5.1 Functional Requirements**
-1. **User Registration & Login**
-   - Register using email & password.
-   - Secure login functionality.
 
-2. **Document Management**
-   - Add new document with name, type, expiry date, and image.
-   - View list of saved documents.
-   - Edit or delete document entries.
+**FR1 — User Login & Registration**  
+- Secure login and registration using email & password.  
+- Input validation and password hashing.
 
-3. **Reminder Module**
-   - Visual or email reminders before expiry.
+**FR2 — Dashboard**  
+- Shows total documents, upcoming expiry alerts, and expired items.  
+- Buttons for Add Document, View All Documents, and Settings.
 
-4. **Dashboard**
-   - Displays all documents with color-coded expiry status.
+**FR3 — Add Document**  
+- Fields: name, type, expiry date, notes, file upload.  
+- Validations: required fields, correct date, file type, file size limit.  
+- Secure file storage.
+
+**FR4 — View Document**  
+- Shows full details of the selected document.  
+- Options: Edit and Delete.
+
+**FR5 — Edit Document**  
+- Update document details and re-upload file with validation.
+
+**FR6 — Delete Document**  
+- Remove a document and its file after confirmation.
+
+**FR7 — View All Documents**  
+- List view with search, sort, and quick actions.
+
+**FR8 — Settings**  
+- Update profile, change password, About App, Logout.
+
+**FR9 — Notifications**  
+- Highlights documents that are near or past expiry.
+
+**FR10 — Security**  
+- SQL injection prevention, sanitization, secure sessions, file validation.
 
 ---
 
