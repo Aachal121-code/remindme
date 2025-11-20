@@ -31,50 +31,50 @@ Objectives:
 
 # Project Category
 This project falls under the category of:
-- Web-Based and Mobile Application (Java + PHP + MySQL)
+- Web-Based Application (PHP + MySQL)
 - It is an information management and reminder system.
 
 
+
 # Front-End and Back-End Technologies
-- Frontend:  
-    •	Java (for app interface – desktop or Android)  
-    •	HTML, CSS, JavaScript (for web dashboard)  
-- Backend:  
-    •	PHP (server-side logic, API handling)  
-    •	MySQL (database to store users and document data)  
-- Optional Tools:  
-    •	PHPMailer (for email reminders)  
-    •	Tesseract OCR (for reading expiry date automatically from images – optional feature)   
+- Frontend Technologies
+•	HTML5 – For creating the structure and layout of the web pages.
+•	CSS3 – For styling, responsive design, and user interface formatting.
+•	JavaScript – For client-side validation and interactive UI features.
+- Backend Technologies
+•	PHP – For server-side logic, form handling, validations, file upload security, and data processing.
+•	MySQL – For storing user accounts, documents, expiry dates, and system data.
 
 
 # Minimum System Requirements
-- Component and Minimum Requirement
-1. Processor	                
-    - Intel Core i3 or equivalent
-2. RAM	  
-    - 4 GB
-3. Storage	                    
-    - 500 MB free disk space
-4. Operating System	        
-    - Windows / Linux / Android
-5. Software Requirements	     
-    - JDK 8+, XAMPP/WAMP, PHP 8+, MySQL, Browser
-6. Optional	                
-    - Internet connection for email reminders
+- For Users (Client Side)
+    •	Any modern web browser (Chrome, Firefox, Edge).
+    •	Basic internet connection (if hosted online).
+    •	Minimum 1 GB RAM device (mobile or PC can run it).
+- For Developers (System Side)
+    •	Operating System: Windows / Linux / macOS
+    •	RAM: Minimum 4 GB
+    •	Software Required:
+        o	VS Code (or any code editor)
+        o	XAMPP 
+        o	phpMyAdmin (for database)
+
 
 
 
 # Number of Modules and Description
-1. User Registration & Login
-    - Users can register with basic details and log in securely.
-2. Add Document Details	
-    - Users can add document name, expiry date, category, and upload an image.
-3. Document Storage & Management	
-    - All details are stored in the database; users can view, update, or delete entries.
-4. Reminder & Notification Module	
-    - The system checks expiry dates and sends notifications or emails before expiry.
-5. Dashboard & Status View	
-    - Displays a list of all documents with color indicators: green (valid), yellow (expiring soon), red (expired).
+1. User Module
+    o	Handles user registration, login, password security, session management, and profile updates.
+2. Dashboard Module
+    o	Displays the overall summary such as total documents, upcoming expiry alerts, expired documents, and quick navigation buttons.
+3. Document Management Module
+    o	Core module where users can add, view, edit, and delete documents.
+    o   Includes validation, file uploads, expiry date tracking, and secure file handling.
+4. Settings Module
+    o	Contains profile settings, password change option, app information (About RemindMe) and logout.
+5. Notification Module
+    o	Highlights documents that are near or past expiry.
+    o   Acts as a reminder system inside the dashboard to warn users in advance.
 
 
 
