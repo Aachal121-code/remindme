@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font: 100% 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background: #f0f2f5;   /*background color change from here */
+}
+
+.login-container {
+    width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #d5ddf1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#email-input, #password-input {
+    width: 100%;
+    padding: 12px;
+    margin: 0 0 20px 0;
+}
