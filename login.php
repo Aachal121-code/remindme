@@ -29,9 +29,9 @@
                 <input type="password" id="password" name="password" required><br>
             </div>
             
-            <button type="submit">Login</button>
+            <button type="submit" id="login-button">Login</button>
             
-            <a href="register.php">Don't have an account?</a>
+            <a href="register.php" id="login-footer">Don't have an account?</a>
         </form>
     </div>
 
