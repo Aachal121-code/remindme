@@ -7,14 +7,37 @@
 body, html {
     font: 100% 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    background: #f0f2f5;   /*background color change from here */
+    background: #7598cd;   /*background color change from here */
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+h1{
+    text-align: center;
+    color: #1f3144;
+    padding: 40px 0 0 0;
+}
+
+.back:hover {
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .login-container {
-    width: 400px;
+    width: 500px;
     margin: 80px auto;
-    padding: 30px;
-    background: #d5ddf1;
+    padding: 40px;
+    background: #cfd6e9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -22,5 +45,78 @@ body, html {
 #email-input, #password-input {
     width: 100%;
     padding: 12px;
-    margin: 0 0 20px 0;
 }
+
+#email-input input, #password-input input {
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #bededf;
+    font-size: 1.1rem;
+    border-radius: 6px;
+}
+
+#email-input input:focus, #password-input input:focus {
+    border-color: #368bc9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(147, 193, 203, 0.5);
+}
+
+#email-input label, #password-input label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(66, 66, 66);
+}
+
+#login-button {
+    width: 100%;
+    padding: 8px;
+    margin: 20px 0;
+    background: #368bc9;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#login-button:hover {
+    background: #2c6fa3;
+}
+
+#login-footer {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #2c44be;
+    display: block;
+}
+
+#login-footer:hover {
+    color: #051e9b;
+}
+
+/*responsive design*/
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+        padding: 30px 0 0 0;
+    }
+
+}
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 20px 0 0 0;
+    }
+    .back {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+    }
+}
+
