@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>ReMindMe</title>
 </head>
 <body>
-    <h1>Login to Continue</h1>
+    <div class="back">
+        <i class="fa-solid fa-arrow-left"></i>
+    </div>
+    <h1>&#128272; Login to Continue</h1>
     <form action="authentication.php" method="post">
         <label for="email">Email ID:</label>
         <input type="text" id="email" name="email" required>
