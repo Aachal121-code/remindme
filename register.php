@@ -14,7 +14,7 @@
         <i class="fa-solid fa-arrow-left"></i>
     </div>
 
-    <h1>Create Your Account</h1>
+    <h1>👤 Create Your Account</h1>
 
     <div class="register-container">
         <form action="authentication.php" method="post">
