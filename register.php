@@ -20,22 +20,22 @@
         <form action="authentication.php" method="post">
             
             <div id="name-input">
-                <label for="name">Name:</label><br>
+                <label for="name">Name</label><br>
                 <input type="text" id="name" name="name" required><br>
             </div>
             
             <div id="email-input">
-                <label for="email">Email ID:</label><br>
+                <label for="email">Email ID</label><br>
                 <input type="text" id="email" name="email" required><br>
             </div>
 
             <div id="password-input">
-                <label for="password">Password:</label><br>
+                <label for="password">Password</label><br>
                 <input type="password" id="password" name="password" required><br>
             </div>
 
             <div id="confirm-input">
-                <label for="confirm_password">Confirm Password:</label><br>
+                <label for="confirm_password">Confirm Password</label><br>
                 <input type="password" id="confirm_password" name="confirm_password" required><br>
             </div>
             <button type="submit" id="register-button">Register</button>
