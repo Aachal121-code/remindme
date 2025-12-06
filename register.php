@@ -36,11 +36,11 @@
 
             <div id="confirm-input">
                 <label for="confirm_password">Confirm Password:</label><br>
-                <input type="text" id="confirm_password" name="confirm_password" required><br>
+                <input type="password" id="confirm_password" name="confirm_password" required><br>
             </div>
-            <button type="submit" id="login-button">Register</button>
+            <button type="submit" id="register-button">Register</button>
             
-            <a href="login.php" id="login-footer">Already have an account?</a>
+            <a href="login.php" id="register-footer">Already have an account?</a>
         </form>
     </div>
 
