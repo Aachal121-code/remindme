@@ -37,6 +37,7 @@ h1{
     width: 500px;
     margin: 80px auto;
     padding: 30px 40px;
+    margin-top: 20px;
     background: #cfd6e9;     /* form container color change from here*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
