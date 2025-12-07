@@ -36,6 +36,13 @@
                     </div>
                 </div>
             </div>
+            <div class="upcoming-expiry">
+                <h2>Upcoming Expiry</h2>
+                <div class="expiry-list" id="expiryList">
+                    <p>No upcoming expiries.</p>
+                </div>
+            </div>
+            
 
         </div>
     </section>
