@@ -63,3 +63,21 @@ body, html {
         scale: 1.2;
 }
 
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quickStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statusCards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
