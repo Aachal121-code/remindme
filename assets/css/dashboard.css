@@ -5,7 +5,7 @@
 }
 
 body, html {
-    background-color: aliceblue;
+    background-color: aliceblue;             /* background-color of the dashboard */
     font-family: poppins, sans-serif;
     height: 100%;
 }
@@ -48,5 +48,18 @@ body, html {
 }
 
 .addDocument button:hover {
-    background-color: #0707a3;      /* hover background-color of add document button */
+    background-color: #0707a3;           /* hover background-color of add document button */
 }
+
+.setting button {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.5rem;
+    border: none;
+}   
+
+.setting button:hover {
+        scale: 1.2;
+}
+
