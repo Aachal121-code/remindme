@@ -18,7 +18,26 @@
                 <button id="settingBtn">⚙️</button>
             </div>
         </div>
-        
+        <div class="dashboard-container">
+            <div class="quickStatus">
+                <h2>Quick Status</h2>
+                <div class="status-card">
+                    <div class="valid">
+                        <h3>🟢 Valid : </h3>
+                        <p id="validCount">0</p>
+                    </div>
+                    <div class="expired">
+                        <h3>🔴 Expired : </h3>
+                        <p id="expiredCount">0</p>
+                    </div>
+                    <div class="aboutToExpire">
+                        <h3>🟠 About to Expire : </h3>
+                        <p id="aboutToExpireCount">0</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
         
 
