@@ -75,9 +75,47 @@ body, html {
     gap: 20px;
 }
 
+.quickStatus h2 {
+    text-align: center;
+    padding: 40px;
+    color: black;         /* color of Quick Status heading */
+    font-size: 28px;
+    /* background-color: yellow;    background-color of Quick Status heading */
+
+}
+
 .statusCards {
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
 }
 
+.statusCards .valid, .statusCards .expired, .statusCards .expiringSoon {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.statusCards .valid h3 {
+    color: rgb(8, 65, 8);              /* color of valid status */
+}
+
+.statusCards .expired h3 {
+    color: rgb(75, 2, 2);             /* color of expired status */
+}
+
+.statusCards .expiringSoon h3 {
+    color: rgb(84, 61, 8);           /* color of expiring soon status */
+}
+
+.statusCards .valid {
+    background-color: #d4edda;        /* background-color of valid status card */
+}
+.statusCards .expired {
+    background-color: #f8d7da;       /* background-color of expired status card */
+}
+.statusCards .expiringSoon {
+    background-color: #fff3cd;       /* background-color of expiring soon status card */
+}
