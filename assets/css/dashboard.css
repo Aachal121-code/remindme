@@ -28,10 +28,25 @@ body, html {
 }
 
 .logo p span{
-    color: #0909cc;
+    color: #0909cc;                /* color of "Me" in logo */
 }
 .logo p {
     font-size: 24px;
     font-weight: bold;
-    color: rgb(13, 5, 127);
+    color: rgb(13, 5, 127);         /* color of "ReMind" in logo */
+}
+
+.addDocument button {
+    padding: 8px 16px;
+    background-color: #0909cc;      /* background-color of add document button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 50rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.addDocument button:hover {
+    background-color: #0707a3;      /* hover background-color of add document button */
 }
