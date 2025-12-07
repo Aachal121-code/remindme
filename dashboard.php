@@ -11,7 +11,7 @@
     <section class="dashboard">
         <div class="navbar">
             <div class="logo">
-                <p>ReMindMe</p>
+                <p>ReMind<span>Me</span></p>
             </div>
             <div class="addDocument">
                 <button id="addDocumentBtn">+ Add Document</button>
@@ -23,18 +23,15 @@
         <div class="dashboard-container">
             <div class="quickStatus">
                 <h2>Quick Status</h2>
-                <div class="status-card">
+                <div class="statusCards">
                     <div class="valid">
-                        <h3>🟢 Valid : </h3>
-                        <p id="validCount">0</p>
+                        <h3>🟢 Valid : <span id="validCount">0</span></h3>
+                    </div>
+                    <div class="expiringSoon">
+                        <h3>🟠 Expiring Soon : <span id="validCount">0</span></h3>
                     </div>
                     <div class="expired">
-                        <h3>🔴 Expired : </h3>
-                        <p id="expiredCount">0</p>
-                    </div>
-                    <div class="aboutToExpire">
-                        <h3>🟠 About to Expire : </h3>
-                        <p id="aboutToExpireCount">0</p>
+                        <h3>🔴 Expired : <span id="validCount">0</span></h3>
                     </div>
                 </div>
             </div>
