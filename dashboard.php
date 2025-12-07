@@ -42,7 +42,12 @@
                     <p>No upcoming expiries.</p>
                 </div>
             </div>
-            
+            <div class="document-list">
+                <h2>Your Documents</h2>
+                <div class="documents" id="documentList">
+                    <p>No documents added yet.</p>
+                </div>
+            </div>
 
         </div>
     </section>
