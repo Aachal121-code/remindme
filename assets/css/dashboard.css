@@ -77,10 +77,11 @@ body, html {
 
 .quickStatus h2 {
     text-align: center;
-    padding: 40px;
-    color: black;         /* color of Quick Status heading */
+    padding: 20px;
+    color: black;                                /* color of Quick Status heading */
     font-size: 28px;
-    /* background-color: yellow;    background-color of Quick Status heading */
+    background-color: rgb(238, 245, 246);       /* background-color of Quick Status heading */
+    border-radius: 8px;
 
 }
 
