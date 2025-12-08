@@ -142,3 +142,43 @@ body, html {
     padding: 10px;
     background-color: white;               /* background-color of expiry list */
 }
+
+.expiry-list p {
+    text-align: center;
+    color: gray;                          /* color of no upcoming expiries text */
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.document-list {
+    margin-bottom: 20px;
+    
+}
+
+.document-list h2 {
+    text-align: center;
+    padding: 20px;
+    color: black;                                /* color of Document List heading */
+    font-size: 28px;
+    background-color: rgb(238, 245, 246);       /* background-color of Document List heading */
+    border-radius: 8px;
+}
+
+.document-list .documents {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #e1f1f2;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;               /* background-color of document list */
+}
+
+.document-list .documents p {
+    text-align: center;
+    color: gray;                          /* color of no documents text */
+    font-size: 18px;
+    margin-top: 20px;
+}
