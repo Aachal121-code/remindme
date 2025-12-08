@@ -120,3 +120,16 @@ body, html {
 .statusCards .expiringSoon {
     background-color: #fff3cd;       /* background-color of expiring soon status card */
 }
+
+.upcoming-expiry {
+    height: 200px;
+}
+
+.upcoming-expiry h2 {
+    text-align: center;
+    padding: 20px;
+    color: black;                                /* color of Upcoming Expiry heading */
+    font-size: 28px;
+    background-color: rgb(238, 245, 246);       /* background-color of Upcoming Expiry heading */
+    border-radius: 8px;
+}
