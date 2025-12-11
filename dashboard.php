@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets//css//Dashboard.css" type="text/css">
-    <title>ReMindMe - dashboard</title>
+    <title>RemindMe - dashboard</title>
 </head>
 <body>
     <section class="dashboard">
         <div class="navbar">
             <div class="logo">
-                <p>ReMind<span>Me</span></p>
+                <p>Remind<span>Me</span></p>
             </div>
             <div class="addDocument">
                 <button id="addDocumentBtn">+ Add Document</button>
