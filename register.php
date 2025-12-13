@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+// Error message
+if(!empty($_SESSION['error'])){
+    echo '<p style="color:red; text-align:center;">'.$_SESSION['error'].'</p>';
+    unset($_SESSION['error']);
+}
+
+// Success message (optional if needed on registration)
+if(!empty($_SESSION['success'])){
+    echo '<p style="color:green; text-align:center;">'.$_SESSION['success'].'</p>';
+    unset($_SESSION['success']);
+}
+
+// Get old input values for sticky fields
+$old_input = $_SESSION['old_input'] ?? [];
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +39,18 @@
     <h1>👤 Create Your Account</h1>
 
     <div class="register-container">
-        <form action="authentication.php" method="post">
+        <form action="controllers/register_process.php" method="post">
             
             <div id="name-input">
                 <label for="name">Name</label><br>
-                <input type="text" id="name" name="name" required><br>
+                <input type="text" id="name" name="name" required 
+                value="<?php echo htmlspecialchars($old_input['name'] ?? ''); ?>"><br>
             </div>
             
             <div id="email-input">
                 <label for="email">Email ID</label><br>
-                <input type="text" id="email" name="email" required><br>
+                <input type="text" id="email" name="email" required 
+                value="<?php echo htmlspecialchars($old_input['email'] ?? ''); ?>"><br>
             </div>
 
             <div id="password-input">
