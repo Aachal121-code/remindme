@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Error message
+if(!empty($_SESSION['error'])){
+    echo '<p style="color:red; text-align:center;">'.$_SESSION['error'].'</p>';
+    unset($_SESSION['error']);
+}
+
+// Get old input
+$old_input = $_SESSION['old_input'] ?? [];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +31,12 @@
     <h1>🔐 Login to Continue</h1>
 
     <div class="login-container">
-        <form action="authentication.php" method="post">
+        <form action="controllers/authentication.php" method="post">
             
             <div id="email-input">
                 <label for="email">Email ID</label><br>
-                <input type="text" id="email" name="email" required><br>
+                <input type="text" id="email" name="email" required
+                value="<?php echo htmlspecialchars($old_input['email'] ?? ''); ?>"><br>
             </div>
             
             <div id="password-input">
