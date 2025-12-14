@@ -1,16 +1,21 @@
 <?php
 session_start();
 
-// Error message
+// Display error message
 if(!empty($_SESSION['error'])){
-    echo '<p style="color:red; text-align:center;">'.$_SESSION['error'].'</p>';
+    echo '<div class="message_error">'.$_SESSION['error'].'</div>';
     unset($_SESSION['error']);
 }
 
-// Get old input
+// Display success message (optional)
+if(!empty($_SESSION['success'])){
+    echo '<div class="message_success">'.$_SESSION['success'].'</div>';
+    unset($_SESSION['success']);
+}
+
+// Sticky input values
 $old_input = $_SESSION['old_input'] ?? [];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
