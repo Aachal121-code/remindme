@@ -120,3 +120,28 @@ h1{
     }
 }
 
+/* styling for error messages shown on login page */
+
+.message {
+    text-align: center;
+    padding: 12px 15px;
+    margin: 15px auto;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.message_error {
+    background-color: #f8d7da;  /* light red */
+    color: #721c24;             /* dark red text */
+    border: 1px solid #f5c6cb;
+}
+
+.message_success {
+    background-color: #d4edda;  /* light green */
+    color: #155724;             /* dark green text */
+    border: 1px solid #c3e6cb;
+}
+
