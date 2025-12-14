@@ -3,17 +3,17 @@ session_start();
 
 // Error message
 if(!empty($_SESSION['error'])){
-    echo '<p style="color:red; text-align:center;">'.$_SESSION['error'].'</p>';
+    echo '<div class="message_error">'.$_SESSION['error'].'</div>';
     unset($_SESSION['error']);
 }
 
-// Success message (optional if needed on registration)
+// Success message
 if(!empty($_SESSION['success'])){
-    echo '<p style="color:green; text-align:center;">'.$_SESSION['success'].'</p>';
+    echo '<div class="message_success">'.$_SESSION['success'].'</div>';
     unset($_SESSION['success']);
 }
 
-// Get old input values for sticky fields
+// Sticky fields
 $old_input = $_SESSION['old_input'] ?? [];
 ?>
 
@@ -27,7 +27,7 @@ $old_input = $_SESSION['old_input'] ?? [];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets//css//register.css" type="text/css">
-    <title>ReMindMe - register</title>
+    <title>RemindMe - register</title>
 </head>
 
 <body>
