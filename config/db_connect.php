@@ -2,7 +2,7 @@
 $DB_HOST = 'localhost';
 $DB_USER = 'root';
 $DB_PASS = ''; // default XAMPP
-$DB_NAME = 'remindme_db';
+$DB_NAME = 'remindme';
 
 $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 if ($conn->connect_error) {
