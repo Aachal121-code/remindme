@@ -1,19 +1,16 @@
 <?php
 session_start();
 
-// Error message
-if(!empty($_SESSION['error'])){
-    echo '<div class="message_error">'.$_SESSION['error'].'</div>';
+if (!empty($_SESSION['error'])) {
+    echo '<div class="form-message error">' . $_SESSION['error'] . '</div>';
     unset($_SESSION['error']);
 }
 
-// Success message
-if(!empty($_SESSION['success'])){
-    echo '<div class="message_success">'.$_SESSION['success'].'</div>';
+if (!empty($_SESSION['success'])) {
+    echo '<div class="form-message success">' . $_SESSION['success'] . '</div>';
     unset($_SESSION['success']);
 }
 
-// Sticky fields
 $old_input = $_SESSION['old_input'] ?? [];
 ?>
 
@@ -26,7 +23,7 @@ $old_input = $_SESSION['old_input'] ?? [];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets//css//register.css" type="text/css">
+    <link rel="stylesheet" href="assets//css//Register.css" type="text/css">
     <title>RemindMe - register</title>
 </head>
 
