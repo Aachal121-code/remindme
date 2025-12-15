@@ -1,21 +1,19 @@
 <?php
 session_start();
 
-// Display error message
-if(!empty($_SESSION['error'])){
-    echo '<div class="message_error">'.$_SESSION['error'].'</div>';
+if (!empty($_SESSION['error'])) {
+    echo '<div class="form-message error">' . $_SESSION['error'] . '</div>';
     unset($_SESSION['error']);
 }
 
-// Display success message (optional)
-if(!empty($_SESSION['success'])){
-    echo '<div class="message_success">'.$_SESSION['success'].'</div>';
+if (!empty($_SESSION['success'])) {
+    echo '<div class="form-message success">' . $_SESSION['success'] . '</div>';
     unset($_SESSION['success']);
 }
 
-// Sticky input values
 $old_input = $_SESSION['old_input'] ?? [];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +21,7 @@ $old_input = $_SESSION['old_input'] ?? [];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets//css//login.css" type="text/css">
+    <link rel="stylesheet" href="assets//css//Login.css" type="text/css">
     <title>ReMindMe - Login</title>
 </head>
 
