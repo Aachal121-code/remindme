@@ -23,8 +23,15 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     padding: 0 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo p span{
