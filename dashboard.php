@@ -36,13 +36,13 @@ if (!isset($_SESSION['user_id'])) {
                 <h2>Quick Status</h2>
                 <div class="statusCards">
                     <div class="valid">
-                        <h3>🟢 Valid : <span id="validCount">0</span></h3>
+                        <h3>✔ Valid : <span id="validCount">0</span></h3>
                     </div>
                     <div class="expiringSoon">
-                        <h3>🟠 Expiring Soon : <span id="validCount">0</span></h3>
+                        <h3>⚠️ Expiring Soon : <span id="validCount">0</span></h3>
                     </div>
                     <div class="expired">
-                        <h3>🔴 Expired : <span id="validCount">0</span></h3>
+                        <h3>❌ Expired : <span id="validCount">0</span></h3>
                     </div>
                 </div>
             </div>
