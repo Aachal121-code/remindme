@@ -22,11 +22,13 @@ if (!isset($_SESSION['user_id'])) {
             <div class="logo">
                 <p>Remind<span>Me</span></p>
             </div>
-            <div class="addDocument">
-                <button id="addDocumentBtn">+ Add Document</button>
-            </div>
-            <div class="setting">
-                <button id="settingBtn">⚙️</button>
+            <div class="nav-actions">
+                <div class="addDocument">
+                    <button id="addDocumentBtn">+ Add Document</button>
+                </div>
+                <div class="setting">
+                    <button id="settingBtn">⚙️</button>
+                </div>
             </div>
         </div>
         <div class="dashboard-container">
