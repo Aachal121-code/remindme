@@ -236,3 +236,48 @@ body, html {
         width: auto;
     }
 }
+/* ================ Document Table Styles =================// */
+.document-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.document-table th,
+.document-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.document-table th {
+    background: #eef3f8;
+    font-weight: 600;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.status.valid {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.soon {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.expired {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.actions {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
