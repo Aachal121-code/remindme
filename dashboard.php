@@ -95,5 +95,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </section>
         
+    <script src="assets/js/dashboard.js"></script>
+
 </body>
 </html>
