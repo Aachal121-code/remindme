@@ -55,7 +55,40 @@ if (!isset($_SESSION['user_id'])) {
             <div class="document-list">
                 <h2>Your Documents</h2>
                 <div class="documents" id="documentList">
-                    <p>No documents added yet.</p>
+                    <!-- <p>No documents added yet.</p> -->
+                    <table class="document-table">
+                        <thead>
+                            <tr>
+                                <th>Document</th>
+                                <th>Type</th>
+                                <th>Expiry</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Document rows will be populated here -->
+                            <tr>
+                                <td>Driving License</td>
+                                <td>Personal</td>
+                                <td>06-03-2025</td>
+                                <td><span class="status soon">⚠️ Expiring Soon</span></td>
+                                <td class="actions">
+                                    👁️ ✏️ 🗑️
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Aadhaar Card</td>
+                                <td>Personal</td>
+                                <td>11-12-2028</td>
+                                <td><span class="status valid">✔ Valid</span></td>
+                                <td class="actions">
+                                    👁️ ✏️ 🗑️
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>    
 
