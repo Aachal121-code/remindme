@@ -1,4 +1,16 @@
-<?php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets//css//register.css" type="text/css">
+    <title>RemindMe - register</title>
+</head>
+
+<body>
+    <?php
 session_start();
 
 if (!empty($_SESSION['error'])) {
@@ -13,21 +25,6 @@ if (!empty($_SESSION['success'])) {
 
 $old_input = $_SESSION['old_input'] ?? [];
 ?>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets//css//Register.css" type="text/css">
-    <title>RemindMe - register</title>
-</head>
-
-<body>
 
     <div class="back">
         <i class="fa-solid fa-arrow-left"></i>
