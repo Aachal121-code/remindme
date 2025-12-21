@@ -7,6 +7,7 @@ if (!isset($_SESSION['user_id'])) {
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,21 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="assets//css//dashboard.css" type="text/css">
     <title>RemindMe - dashboard</title>
 </head>
+<?php
+
+if (!empty($_SESSION['error'])) {
+    echo '<div class="toast error">'.$_SESSION['error'].'</div>';
+    unset($_SESSION['error']);
+}
+
+if (!empty($_SESSION['success'])) {
+    echo '<div class="toast success">'.$_SESSION['success'].'</div>';
+    unset($_SESSION['success']);
+}
+?>
+
+
+
 <body>
     <section class="dashboard">
         <div class="navbar">
@@ -96,6 +112,13 @@ if (!isset($_SESSION['user_id'])) {
     </section>
         
     <script src="assets/js/dashboard.js"></script>
+    <script>
+    setTimeout(() => {
+        document.querySelectorAll('.toast').forEach(el => el.remove());
+    }, 3000);
+</script>
+
 
 </body>
+
 </html>
