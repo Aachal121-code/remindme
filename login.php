@@ -1,19 +1,3 @@
-<?php
-session_start();
-
-if (!empty($_SESSION['error'])) {
-    echo '<div class="form-message error">' . $_SESSION['error'] . '</div>';
-    unset($_SESSION['error']);
-}
-
-if (!empty($_SESSION['success'])) {
-    echo '<div class="form-message success">' . $_SESSION['success'] . '</div>';
-    unset($_SESSION['success']);
-}
-
-$old_input = $_SESSION['old_input'] ?? [];
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +5,26 @@ $old_input = $_SESSION['old_input'] ?? [];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets//css//Login.css" type="text/css">
+    <link rel="stylesheet" href="assets//css//login.css" type="text/css">
     <title>ReMindMe - Login</title>
 </head>
 
 <body>
+    <?php
+        session_start();
+
+        if (!empty($_SESSION['error'])) {
+            echo '<div class="form-message error">' . $_SESSION['error'] . '</div>';
+            unset($_SESSION['error']);
+        }
+
+        if (!empty($_SESSION['success'])) {
+            echo '<div class="form-message success">' . $_SESSION['success'] . '</div>';
+            unset($_SESSION['success']);
+        }
+
+        $old_input = $_SESSION['old_input'] ?? [];
+    ?>
 
     <div class="back">
         <i class="fa-solid fa-arrow-left"></i>
