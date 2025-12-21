@@ -20,16 +20,16 @@ if (!isset($_SESSION['user_id'])) {
 
     <h2>Add New Document</h2>
 
-    <form>
+    <form action="controllers/document_controller.php" method="POST" enctype="multipart/form-data">
 
         <div class="form-group">
             <label>Document Name</label>
-            <input type="text" placeholder="Enter document name">
+            <input type="text" name="document_name" placeholder="Enter document name">
         </div>
 
         <div class="form-group">
             <label>Document Type</label>
-            <select>
+            <select name="document_type">
                 <option value="">Select type</option>
                 <option>Personal</option>
                 <option>Vehicle</option>
@@ -41,17 +41,17 @@ if (!isset($_SESSION['user_id'])) {
 
         <div class="form-group">
             <label>Expiry Date</label>
-            <input type="date">
+            <input type="date" name="expiry_date">
         </div>
 
         <div class="form-group">
             <label>Upload Document</label>
-            <input type="file">
+            <input type="file" name="document_file">
         </div>
 
         <div class="form-group">
             <label>Notes</label>
-            <textarea rows="4" placeholder="Add any notes..."></textarea>
+            <textarea name="notes" rows="4" placeholder="Add any notes..."></textarea>
         </div>
 
         <button type="submit" class="save-btn">Save Document</button>
