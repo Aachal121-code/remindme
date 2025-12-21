@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <title>Add Document - ReMindMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/add_document.css">
+    <link rel="stylesheet" href="assets/css/Add_document.css">
 </head>
 <body>
 
@@ -78,7 +78,7 @@ if (!empty($_SESSION['success'])) {
     <script>
     setTimeout(() => {
         document.querySelectorAll('.toast').forEach(el => el.remove());
-    }, 3000);
+    }, 5000);
 </script>
 
 </body>
