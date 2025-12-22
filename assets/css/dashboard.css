@@ -281,6 +281,10 @@ body, html {
     cursor: pointer;
 }
 
+.actions a {
+    text-decoration: none;
+}
+
 /* //success and error message styles */
 /* ===== TOAST MESSAGE ===== */
 .toast {
