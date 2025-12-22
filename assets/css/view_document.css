@@ -1,0 +1,30 @@
+body {
+    font-family: Poppins, sans-serif;
+    background: #f4f6fb;
+}
+
+.view-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.doc-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.notes {
+    margin-top: 20px;
+}
