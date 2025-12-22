@@ -4,8 +4,20 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
-?>
 
+require_once('config/db_connect.php');
+
+$user_id = $_SESSION['user_id'];
+
+$stmt = $conn->prepare("
+    SELECT * FROM documents 
+    WHERE user_id = ? 
+    ORDER BY expiry_date ASC
+");
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+?>
 
 
 <!DOCTYPE html>
@@ -83,27 +95,43 @@ if (!empty($_SESSION['success'])) {
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Document rows will be populated here -->
-                            <tr>
-                                <td>Driving License</td>
-                                <td>Personal</td>
-                                <td>06-03-2025</td>
-                                <td><span class="status soon">⚠️ Expiring Soon</span></td>
-                                <td class="actions">
-                                    👁️ ✏️ 🗑️
-                                </td>
-                            </tr>
+                            <?php if ($result->num_rows > 0): ?>
+                                <?php while ($row = $result->fetch_assoc()): ?>
+                                    <tr>
+                                        <td><?php echo htmlspecialchars($row['doc_name']); ?></td>
+                                        <td><?php echo htmlspecialchars($row['category']); ?></td>
+                                        <td><?php echo date('d-m-Y', strtotime($row['expiry_date'])); ?></td>
 
-                            <tr>
-                                <td>Aadhaar Card</td>
-                                <td>Personal</td>
-                                <td>11-12-2028</td>
-                                <td><span class="status valid">✔ Valid</span></td>
-                                <td class="actions">
-                                    👁️ ✏️ 🗑️
-                                </td>
-                            </tr>
+                                        <td>
+                                            <?php
+                                            $today = date('Y-m-d');
+                                            $diff = (strtotime($row['expiry_date']) - strtotime($today)) / (60*60*24);
+
+                                            if ($diff < 0) {
+                                                echo '<span class="status expired">❌ Expired</span>';
+                                            } elseif ($diff <= 30) {
+                                                echo '<span class="status soon">⚠️ Expiring Soon</span>';
+                                            } else {
+                                                echo '<span class="status valid">✔ Valid</span>';
+                                            }
+                                            ?>
+                                        </td>
+
+                                        <td class="actions">
+                                            <a href="view_document.php?id=<?php echo $row['id']; ?>">👁️</a>
+                                            <a href="edit_document.php?id=<?php echo $row['id']; ?>">✏️</a>
+                                            <a href="delete_document.php?id=<?php echo $row['id']; ?>" 
+                                            onclick="return confirm('Delete this document?')">🗑️</a>
+                                        </td>
+                                    </tr>
+                                <?php endwhile; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="5" style="text-align:center;">No documents added yet.</td>
+                                </tr>
+                            <?php endif; ?>
                         </tbody>
+
                     </table>
                 </div>
             </div>    
