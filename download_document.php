@@ -18,14 +18,14 @@ $user_id = $_SESSION['user_id'];
 $stmt = $conn->prepare("SELECT * FROM documents WHERE id = ? AND user_id = ?");
 $stmt->bind_param("ii", $doc_id, $user_id);
 $stmt->execute();
-$result = $stmt->get_result();
+$result = $stmt->get_result();  //execute the query
 
 if ($result->num_rows === 0) {
     header('Location: dashboard.php');
     exit;
 }
 
-$doc = $result->fetch_assoc();
+$doc = $result->fetch_assoc();   //fetch the document details
 
 // If there's an uploaded file path, attempt to serve it
 if (!empty($doc['image_path'])) {
@@ -45,7 +45,7 @@ if (!empty($doc['image_path'])) {
     if ($real && is_file($real) && strpos($real, realpath(__DIR__)) === 0) {
         $filename = basename($real);
         if (function_exists('finfo_open')) {
-            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);   
             $mime = finfo_file($finfo, $real);
             finfo_close($finfo);
         } else {
@@ -67,18 +67,18 @@ if (!empty($doc['image_path'])) {
 
 // Fallback: download as a simple text summary (safe, no extra libs required)
 $today = date('Y-m-d');
-$diff = ($doc['expiry_date']) ? ((strtotime($doc['expiry_date']) - strtotime($today)) / 86400) : 0;
-$status = ($diff < 0) ? 'Expired' : (($diff <= 30) ? 'Expiring Soon' : 'Valid');
+$diff = ($doc['expiry_date']) ? ((strtotime($doc['expiry_date']) - strtotime($today)) / 86400) : 0;  //calculate difference in days
+$status = ($diff < 0) ? 'Expired' : (($diff <= 30) ? 'Expiring Soon' : 'Valid');        
 
-$filename = preg_replace('/[^A-Za-z0-9_\-]/', '_', $doc['doc_name'] ?: 'document') . '.txt';
+$filename = preg_replace('/[^A-Za-z0-9_\-]/', '_', $doc['doc_name'] ?: 'document') . '.txt';   //sanitize filename
 $content = "Document: " . $doc['doc_name'] . PHP_EOL;
 $content .= "Type: " . $doc['category'] . PHP_EOL;
 $content .= "Expiry Date: " . $doc['expiry_date'] . PHP_EOL;
 $content .= "Status: " . $status . PHP_EOL . PHP_EOL;
 $content .= "Notes:" . PHP_EOL . ($doc['notes'] ?: '(none)') . PHP_EOL;
 
-header('Content-Type: text/plain; charset=utf-8');
-header('Content-Disposition: attachment; filename="' . $filename . '"');
-header('Content-Length: ' . strlen($content));
+header('Content-Type: text/plain; charset=utf-8');     //set content type
+header('Content-Disposition: attachment; filename="' . $filename . '"');   //set download filename
+header('Content-Length: ' . strlen($content));    //set content length
 echo $content;
 exit;
