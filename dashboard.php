@@ -6,6 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 require_once('config/db_connect.php');
+require_once 'dashboard_status.php';
 
 $user_id = $_SESSION['user_id'];
 
@@ -64,13 +65,13 @@ if (!empty($_SESSION['success'])) {
                 <h2>Quick Status</h2>
                 <div class="statusCards">
                     <div class="valid">
-                        <h3>✔ Valid : <span id="validCount">0</span></h3>
+                        <h3>✔ Valid : <span><?php echo $valid; ?></span></h3>
                     </div>
                     <div class="expiringSoon">
-                        <h3>⚠️ Expiring Soon : <span id="validCount">0</span></h3>
+                        <h3>⚠️ Expiring Soon : <span><?php echo $expiringSoon; ?></span></h3>
                     </div>
                     <div class="expired">
-                        <h3>❌ Expired : <span id="validCount">0</span></h3>
+                        <h3>❌ Expired : <span><?php echo $expired; ?></span></h3>
                     </div>
                 </div>
             </div>
