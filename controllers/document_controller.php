@@ -87,3 +87,4 @@ if ($stmt->execute()) {
 $_SESSION['error'] = 'Something went wrong. Try again.';
 header('Location: ../add_document.php');
 exit;
+?>
