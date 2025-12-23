@@ -119,3 +119,19 @@ body {
         transform: translateX(100%);
     }
 }
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border-radius:10px;
+    color:var(--accent-600);
+    background:transparent;
+    border:1px solid rgba(37,99,235,0.12);
+    text-decoration:none;
+    font-weight:600;
+    transition:all .15s ease-in-out;
+}
+.back-btn:hover{background:var(--glass);transform:translateY(-1px)}
+.back-btn:focus{outline:3px solid rgba(37,99,235,0.12)}
