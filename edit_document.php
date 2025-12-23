@@ -116,12 +116,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Edit Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/add_document.css">
+    <link rel="stylesheet" href="assets/css/edit_document.css">
 </head>
 <body>
 
-<div class="add-doc-container">
-
+<div class="edit-doc-container">
+    <a href="dashboard.php" class="back-btn">← Back</a>
     <h2>Edit Document</h2>
 
     <?php if (!empty($_SESSION['error'])): ?>
