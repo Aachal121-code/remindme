@@ -7,6 +7,7 @@ if (!isset($_SESSION['user_id'])) {
 
 require_once('config/db_connect.php');
 require_once 'dashboard_status.php';
+require_once 'controllers/upcoming_expiry.php';
 
 $user_id = $_SESSION['user_id'];
 
