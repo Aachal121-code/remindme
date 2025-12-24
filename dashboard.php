@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
 
 require_once('config/db_connect.php');
 require_once 'dashboard_status.php';
-require_once 'controllers/upcoming_expiry.php';
+require_once 'upcoming_expiry.php';
 
 $user_id = $_SESSION['user_id'];
 
@@ -28,7 +28,7 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets//css//Dashboard.css" type="text/css">
+    <link rel="stylesheet" href="assets//css//dashboard.css" type="text/css">
     <title>RemindMe - dashboard</title>
 </head>
 <?php
@@ -77,11 +77,25 @@ if (!empty($_SESSION['success'])) {
                 </div>
             </div>
             <div class="upcoming-expiry">
-                <h2>Upcoming Expiry</h2>
-                <div class="expiry-list" id="expiryList">
-                    <p>No upcoming expiries.</p>
+                <h2>Upcoming Expiry (Next 30 Days)</h2>
+
+                <div class="expiry-list">
+                    <?php if (empty($upcomingDocs)): ?>
+                        <p>No upcoming expiries.</p>
+                    <?php else: ?>
+                        <?php foreach ($upcomingDocs as $doc): ?>
+                            <div class="expiry-item">
+                                <strong><?php echo htmlspecialchars($doc['doc_name']); ?></strong>
+                                <span>
+                                    Expires on:
+                                    <?php echo date('d M Y', strtotime($doc['expiry_date'])); ?>
+                                </span>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
+
             <div class="document-list">
                 <h2>Your Documents</h2>
                 <div class="documents" id="documentList">
