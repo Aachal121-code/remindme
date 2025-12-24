@@ -236,7 +236,7 @@ body, html {
         width: auto;
     }
 }
-/* ================ Document Table Styles =================// */
+/* document table style */
 .document-table {
     width: 100%;
     border-collapse: collapse;
@@ -285,8 +285,7 @@ body, html {
     text-decoration: none;
 }
 
-/* //success and error message styles */
-/* ===== TOAST MESSAGE ===== */
+/* success and error message styles */
 .toast {
     position: fixed;
     top: 20px;
@@ -303,17 +302,14 @@ body, html {
     animation: slideIn 0.4s ease, fadeOut 0.5s ease 2.5s forwards;
 }
 
-/* Success */
 .toast.success {
     background: linear-gradient(135deg, #2ecc71, #27ae60);
 }
 
-/* Error */
 .toast.error {
     background: linear-gradient(135deg, #e74c3c, #c0392b);
 }
 
-/* Animations */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -335,49 +331,47 @@ body, html {
 
 /* Upcoming Expiry Section */
 .expiry-list {
-    background: #ffffff;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f9f9f9; /* light background */
     border-radius: 10px;
-    padding: 16px;
-    max-height: 260px;
-    overflow-y: auto;
-    border-left: 4px solid #f59e0b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
 }
 
-.expiry-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.expiry-list p {               /* no upcoming expiries text style */
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
-.expiry-items li {
+.expiry-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 12px;
-    margin-bottom: 8px;
-    background: #fff7ed;
+    background-color: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4CAF50; /* green accent for upcoming docs */
     border-radius: 6px;
-    font-size: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.expiry-items li::before {
-    content: "⏰";
-    margin-right: 8px;
+.expiry-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.doc-name {
-    font-weight: 500;
-    color: #92400e;
+
+ .expiry-item strong {        /* document name style */
+    font-size: 16px;
+    color: #333;
 }
 
-.doc-date {
+
+.expiry-item span {             /* expiry date style */
     font-size: 14px;
-    color: #b45309;
+    color: #666;
 }
-
-.no-expiry {
-    text-align: center;
-    color: #16a34a;
-    font-weight: 500;
-}
-
