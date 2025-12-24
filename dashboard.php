@@ -77,7 +77,7 @@ if (!empty($_SESSION['success'])) {
                 </div>
             </div>
             <div class="upcoming-expiry">
-                <h2>Upcoming Expiry (Next 30 Days)</h2>
+                <h2>Upcoming Expiry</h2>
 
                 <div class="expiry-list">
                     <?php if (empty($upcomingDocs)): ?>
