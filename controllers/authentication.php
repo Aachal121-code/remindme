@@ -40,7 +40,7 @@ if ($row = $result->fetch_assoc()) {
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['user_name'] = $row['name'];
         unset($_SESSION['old_input']); // clear sticky data on successful login
-        header('Location: ../dashboard.php');
+        header('Location: ../dashboard_router.php');
         exit;
     }
 }
