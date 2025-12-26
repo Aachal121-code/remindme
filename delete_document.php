@@ -27,5 +27,5 @@ if ($stmt->execute()) {
 }
 
 
-header('Location: dashboard.php');  //redirected to the dashboard page
+header('Location: dashboard_router.php');  //redirected to the dashboard_router page
 exit;
