@@ -1,10 +1,4 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit;
-}
-
 require_once('config/db_connect.php');
 require_once 'dashboard_status.php';
 require_once 'upcoming_expiry.php';
