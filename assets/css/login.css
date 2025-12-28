@@ -10,18 +10,6 @@ body, html {
     background: #7598cd;   /*background color change from here */
 }
 
-.back {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 1.5rem;
-    color: white;       /* arrow color change from here */
-    text-decoration: none;
-    background: rgba(0, 0, 0, 0.2);   /* arrow bg-color change from here */
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-}
 
 h1{
     text-align: center;
@@ -29,9 +17,6 @@ h1{
     padding: 40px 0 0 0;
 }
 
-.back:hover {
-    background: rgba(0, 0, 0, 0.4);
-}
 
 .login-container {
     width: 500px;
