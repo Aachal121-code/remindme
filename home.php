@@ -8,8 +8,20 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to RemindMe</title>
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/Home.css">
 </head>
+<?php
+
+if (!empty($_SESSION['error'])) {
+    echo '<div class="toast error">'.$_SESSION['error'].'</div>';
+    unset($_SESSION['error']);
+}
+
+if (!empty($_SESSION['success'])) {
+    echo '<div class="toast success">'.$_SESSION['success'].'</div>';
+    unset($_SESSION['success']);
+}
+?>
 <body>
 
 <header class="site-header">
