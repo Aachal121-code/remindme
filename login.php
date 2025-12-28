@@ -26,9 +26,6 @@
         $old_input = $_SESSION['old_input'] ?? [];
     ?>
 
-    <div class="back">
-        <i class="fa-solid fa-arrow-left"></i>
-    </div>
 
     <h1>🔐 Login to Continue</h1>
 
