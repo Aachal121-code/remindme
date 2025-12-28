@@ -1,24 +1,54 @@
 <?php
 session_start();
-require_once('config/db_connect.php');  //connection to the database 
+require_once('config/db_connect.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');   //if session end redirect to login page
+    header('Location: login.php');
     exit;
 }
 
 if (!isset($_GET['id'])) {
     $_SESSION['error'] = 'Invalid request.';
-    header('Location: dashboard.php');     //else redirected to the dashboard page
+    header('Location: dashboard_router.php');
     exit;
 }
 
-$doc_id = (int) $_GET['id'];     //get the document id from the url
-$user_id = $_SESSION['user_id'];   //get the user id from the session
+$user_id = $_SESSION['user_id'];
+$doc_id  = (int) $_GET['id'];
 
+/* 1️⃣ Fetch image path first */
+$stmt = $conn->prepare("
+    SELECT image_path 
+    FROM documents 
+    WHERE id = ? AND user_id = ?
+");
+$stmt->bind_param("ii", $doc_id, $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
 
-$stmt = $conn->prepare("DELETE FROM documents WHERE id = ? AND user_id = ?");   //sql query to delete the document
-$stmt->bind_param("ii", $doc_id, $user_id);    //bind the parameters
+if ($result->num_rows === 0) {
+    $_SESSION['error'] = 'Document not found.';
+    header('Location: dashboard_router.php');
+    exit;
+}
+
+$doc = $result->fetch_assoc();
+
+/* 2️⃣ Delete image file if exists */
+if (!empty($doc['image_path'])) {
+    $filePath = $doc['image_path'];
+
+    if (file_exists($filePath)) {
+        unlink($filePath); // 🔥 deletes uploaded image
+    }
+}
+
+/* 3️⃣ Delete database record */
+$stmt = $conn->prepare("
+    DELETE FROM documents 
+    WHERE id = ? AND user_id = ?
+");
+$stmt->bind_param("ii", $doc_id, $user_id);
 
 if ($stmt->execute()) {
     $_SESSION['success'] = 'Document deleted successfully.';
@@ -26,6 +56,6 @@ if ($stmt->execute()) {
     $_SESSION['error'] = 'Failed to delete document.';
 }
 
-
-header('Location: dashboard_router.php');  //redirected to the dashboard_router page
+/* 4️⃣ Redirect through router */
+header('Location: dashboard_router.php');
 exit;
