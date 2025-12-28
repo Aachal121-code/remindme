@@ -26,9 +26,6 @@ if (!empty($_SESSION['success'])) {
 $old_input = $_SESSION['old_input'] ?? [];
 ?>
 
-    <div class="back">
-        <i class="fa-solid fa-arrow-left"></i>
-    </div>
 
     <h1>👤 Create Your Account</h1>
 
