@@ -64,19 +64,18 @@ body, html {
     transform: translateY(-1px);
 }
 
-.setting button {
-    background-color: transparent;
-    border: none;
-    font-size: 1.5rem;
+.settingBtn {
+    font-size: 1.6rem;
+    text-decoration: none;
     cursor: pointer;
-    padding: 6px;
-    border-radius: 6px;
-    transition: background 0.2s ease, transform 0.2s ease;
+    padding: 8px;
+    display: inline-block;
 }
-.setting button:hover {
-    background-color: rgba(0, 0, 0, 0.08);
-    transform: scale(1.1);
+
+.settingBtn:hover {
+    transform: rotate(20deg) scale(1.1);
 }
+
 
 .dashboard-container {
     display: flex;
