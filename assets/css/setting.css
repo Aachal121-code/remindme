@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f6f8fa;
+}
+
+/* Layout */
+.settings-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.settings-sidebar {
+    width: 260px;
+    background: #fff;
+    border-right: 1px solid #e5e7eb;
+    padding: 20px;
+}
+
+.settings-sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.settings-sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #24292f;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+.settings-sidebar a.active,
+.settings-sidebar a:hover {
+    background: #0969da;
+    color: #fff;
+}
+
+.logout {
+    margin-top: 30px;
+    background: #d1242f;
+    color: white !important;
+}
+
+/* Menu cards (shown on menu page, and good for mobile) */
+.settings-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.setting-card {
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(13, 8, 59, 0.04);
+    text-decoration: none;
+    color: #111;
+}
+
+.setting-card h4 { margin: 0 0 6px 0 }
+.setting-card p { margin: 0; color: #666; font-size: 0.95rem }
+
+.back-btn {
+    display: none;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #0969da;
+}
+
+/* Improved card spacing */
+.card label { display:block; margin-top:8px; font-weight:600 }
+.card input[type="text"], .card input[type="email"], .card input[type="password"], .card input[type="file"] { width:100%; padding:8px; margin-top:6px }
+.card button { margin-top:12px; padding:8px 12px }
+
+/* Profile specific styles */
+.profile-view { display:block }
+.profile-edit-form input[type="text"], .profile-edit-form input[type="email"] { width:100%; padding:8px; margin-top:6px }
+.edit-profile-btn, .cancel-edit-btn { padding:8px 12px; border-radius:6px; cursor:pointer }
+.edit-profile-btn { background:#0969da; color:#fff; border:none }
+.cancel-edit-btn { background:#eef3f8; border:none }
+
+/* Content */
+.settings-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+    .settings-layout {
+        flex-direction: column;
+    }
+
+    .settings-sidebar {
+        display: none;
+    }
+
+    .settings-content {
+        padding: 20px;
+    }
+
+    /* Mobile: show menu as a full-width list when on the menu page */
+    body.menu-page .settings-menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    body.menu-page .setting-card {
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border-radius: 8px;
+        padding: 12px;
+    }
+
+    /* Make sure content isn't covered */
+    body.menu-page .settings-content { padding-bottom: 20px }
+
+    /* Show back button on mobile pages */
+    .back-btn { display: inline-block; margin-bottom:12px; padding:8px 10px; background:#fff; border:1px solid #e5e7eb; color:#0969da; border-radius:6px; text-decoration:none }
+}
