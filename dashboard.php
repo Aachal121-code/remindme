@@ -22,7 +22,7 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets//css//dashboard.css" type="text/css">
+    <link rel="stylesheet" href="assets//css//Dashboard.css" type="text/css">
     <title>RemindMe - dashboard</title>
 </head>
 <?php
@@ -51,7 +51,7 @@ if (!empty($_SESSION['success'])) {
                     <button id="addDocumentBtn">+ Add Document</button>
                 </div>
                 <div class="setting">
-                    <button id="settingBtn">⚙️</button>
+                    <a href="settings/settings.php" id="settingBtn">⚙️</a>
                 </div>
             </div>
         </div>
