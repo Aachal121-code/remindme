@@ -49,8 +49,8 @@ body {
 
 /* Menu cards (shown on menu page, and good for mobile) */
 .settings-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 12px;
 }
 
