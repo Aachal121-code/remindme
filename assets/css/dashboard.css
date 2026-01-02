@@ -64,17 +64,33 @@ body, html {
     transform: translateY(-1px);
 }
 
-.settingBtn {
-    font-size: 1.6rem;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 8px;
-    display: inline-block;
+/* Settings button styles */
+.setting {
+    display: flex;
+    align-items: center;
 }
 
-.settingBtn:hover {
-    transform: rotate(20deg) scale(1.1);
+#settingBtn {
+    text-decoration: none;
+    font-size: 22px;
+    color: #334155;                 
+    padding: 5px;
+    border-radius: 50%;
 }
+
+#settingBtn:hover {
+    background-color: #e2e8f0;      
+    color: #0f172a;     
+}
+
+
+@media (max-width: 768px) {
+    #settingBtn {
+        font-size: 24px;
+        padding: 12px;
+    }
+}
+
 
 
 .dashboard-container {
