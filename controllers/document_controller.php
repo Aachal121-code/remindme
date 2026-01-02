@@ -79,6 +79,26 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
+
+    require_once __DIR__ . '/../mail/mail_config.php';
+    require_once __DIR__ . '/../mail/mail_sending.php'; // contains sendReminder() function
+
+    // Fetch newly added document info
+    $newDocId = $stmt->insert_id;
+    $newDoc = [
+        'id' => $newDocId,
+        'doc_name' => $doc_name,
+        'expiry_date' => $expiry_date,
+        'name' => $_SESSION['user_name'],
+        'email' => $_SESSION['user_email'] ?? '', // ensure this is stored in session
+        'reminder_30_sent' => 0,
+        'reminder_7_sent' => 0
+    ];
+
+    // Send test email immediately (for new document)
+    sendReminder($newDoc, 30); 
+    sendReminder($newDoc, 7);
+
     $_SESSION['success'] = 'Document added successfully!';
     header('Location: ../dashboard.php');
     exit;
