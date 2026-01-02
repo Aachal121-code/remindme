@@ -76,6 +76,10 @@ $page = $_GET['page'] ?? 'menu';
                     <h4>About</h4>
                     <p>About the app and support</p>
                 </a>
+                <a class="setting-card" href="../logout.php">
+                    <h4>Logout</h4>
+                    <p>Logout from your account</p>
+                </a>
             </div>
             <?php
 
