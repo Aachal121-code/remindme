@@ -15,25 +15,25 @@ $page = $_GET['page'] ?? 'menu';
     <meta charset="UTF-8">
     <title>Settings - ReMindMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/Setting.css">
+    <link rel="stylesheet" href="../assets/css/setting.css">
 </head>
 <body class="<?= $page==='menu' ? 'menu-page' : '' ?>">
 
 <div class="settings-layout">
-
     <!-- Sidebar -->
     <aside class="settings-sidebar">
+        <a href="../dashboard.php" class="back-btn">← Back</a>
         <h2>⚙️ Settings</h2>
-
+        
         <a href="?page=profile" class="<?= $page=='profile'?'active':'' ?>">Profile</a>
         <a href="?page=security" class="<?= $page=='security'?'active':'' ?>">Security</a>
         <a href="?page=preference" class="<?= $page=='preference'?'active':'' ?>">Preferences</a>
         <a href="?page=privacy" class="<?= $page=='privacy'?'active':'' ?>">Privacy</a>
         <a href="?page=about" class="<?= $page=='about'?'active':'' ?>">About</a>
-
+        
         <a href="../logout.php" class="logout">Logout</a>
     </aside>
-
+    
     <!-- Content -->
     <main class="settings-content">
         <?php
@@ -46,15 +46,16 @@ $page = $_GET['page'] ?? 'menu';
             echo '<div class="toast success">' . $_SESSION['success'] . '</div>';
             unset($_SESSION['success']);
         }
-
+        
         $allowed = ['menu','profile','security','preference','privacy','about'];
         if (!in_array($page, $allowed)) {
             $page = 'menu';
         }
-
+        
         // If we're on the menu page, show a simple list of settings
         if ($page === 'menu') {
             ?>
+            <a href="../dashboard.php" class="back-btn">← Back</a>
             <div class="settings-menu">
                 <a class="setting-card" href="settings.php?page=profile">
                     <h4>Profile & Account</h4>
