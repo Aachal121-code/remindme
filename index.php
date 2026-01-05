@@ -25,7 +25,6 @@ session_start();
                 <a href="#about">About</a>
             </div>
             <div class="nav-actions">
-                <a href="login.php" class="btn-login">Login</a>
                 <a href="register.php" class="btn-register">Get Started</a>
             </div>
         </div>
@@ -141,13 +140,13 @@ session_start();
                     <h3>Dashboard Overview</h3>
                     <p>Quick status view showing valid, expiring soon, and expired documents at a glance.</p>
                 </div>
-                <div class="feature-card">
+                <!-- <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <h3>Easy Search & Filter</h3>
                     <p>Quickly find any document with search and filter options. Stay organized effortlessly.</p>
-                </div>
+                </div> -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-edit"></i>
