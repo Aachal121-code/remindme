@@ -232,23 +232,40 @@ body, html {
 @media (max-width: 480px) {
     .navbar {
         height: auto;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px 14px;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 8px 12px;
+        overflow-x: auto;
+        -ms-overflow-style: none; /* hide scrollbar IE/Edge */
+        scrollbar-width: none; /* hide scrollbar Firefox */
+    }
+
+    .navbar::-webkit-scrollbar {
+        display: none; /* hide scrollbar Chrome/Safari */
+        height: 0;
     }
 
     .logo {
-        width: 100%;
-        text-align: center;
+        width: auto;
+        text-align: left;
+        flex: 0 0 auto;
     }
 
+    .logo p { font-size: 20px; }
+
     .nav-actions {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        justify-content: flex-end;
+        flex: 1 1 auto;
+        display: flex;
+        gap: 8px;
+        align-items: center;
     }
 
     .addDocument button {
         width: auto;
+        padding: 6px 10px;
+        font-size: 14px;
     }
 }
 /* document table style */
@@ -389,4 +406,45 @@ body, html {
 .expiry-item span {             /* expiry date style */
     font-size: 14px;
     color: #666;
+}
+
+/* Keep status cards compact and on a single row */
+@media (max-width: 768px) {
+    .statusCards {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: auto;
+        -ms-overflow-style: none; 
+        scrollbar-width: none; /* hide scrollbar Firefox */
+        padding-bottom: 6px;
+    }
+
+    .statusCards::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+        height: 0;
+    }
+
+    .statusCards .valid,
+    .statusCards .expired,
+    .statusCards .expiringSoon {
+        flex: 0 0 auto;
+        min-width: 110px;
+        padding: 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .document-list .documents {
+        overflow-x: auto;
+    }
+
+    .document-table th,
+    .document-table td {
+        padding: 8px 10px;
+        font-size: 14px;
+        white-space: nowrap; /* prevent wrapping */
+    }
 }
