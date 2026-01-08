@@ -1,8 +1,8 @@
 <?php
-// Simple About page
+    
 ?>
 
-<h3>About ReMindMe</h3>
+<h3>About RemindMe</h3>
 <div class="card">
     <p><strong>Version:</strong> 1.0</p>
     <p><strong>Developer:</strong> Aachal Bhonde</p>
