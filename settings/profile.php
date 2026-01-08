@@ -49,7 +49,9 @@ $row = $res->fetch_assoc();
 $name = $row['name'] ?? '';
 $email = $row['email'] ?? '';
 ?>
-
+<?php
+include '../popup.php';
+?>
 <h3>Profile & Account</h3>
 
 <div class="card profile-view">
