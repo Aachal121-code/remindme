@@ -16,6 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_prefs'])) {
     exit;
 }
 ?>
+<?php
+include '../popup.php';
+?>
 
 <h3>App Preferences</h3>
 <form method="post">
