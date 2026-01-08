@@ -56,7 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
+<?php
+include '../popup.php';
+?>
 <h3>Security</h3>
 
 <form method="post">
