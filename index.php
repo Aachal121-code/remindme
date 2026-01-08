@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReMindMe - Never Forget Important Document Expiry Dates</title>
+    <title>RemindMe</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -15,8 +15,7 @@ session_start();
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-icon">📅</span>
-                <span class="logo-text">ReMindMe</span>
+                <span class="logo-text">RemindMe</span>
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
@@ -39,7 +38,7 @@ session_start();
                     <span class="highlight">Document Expiry Date</span> Again
                 </h1>
                 <p class="hero-description">
-                    ReMindMe is your personal document expiry reminder system. Track documents, 
+                    RemindMe is your personal document expiry reminder system. Track documents, 
                     warranty cards, licenses, insurance, and more. Get automatic reminders 
                     before expiry dates and keep everything organized in one secure place.
                 </p>
@@ -88,7 +87,7 @@ session_start();
                                 <strong>Health Insurance</strong>
                                 <span>Expires: 05 Jan 2025</span>
                             </div>
-                            <span class="status-badge warning">Soon</span>
+                            <span class="status-badge warning">Expiring Soon</span>
                         </div>
                         <div class="doc-item expired">
                             <i class="fas fa-certificate"></i>
@@ -176,7 +175,7 @@ session_start();
     <section id="advantages" class="advantages-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose ReMindMe?</h2>
+                <h2 class="section-title">Why Choose RemindMe?</h2>
                 <p class="section-subtitle">The advantages that make us the best choice for document management</p>
             </div>
             <div class="advantages-grid">
@@ -231,7 +230,7 @@ session_start();
         <div class="container">
             <div class="why-content">
                 <div class="why-text">
-                    <h2>Why You Need ReMindMe</h2>
+                    <h2>Why You Need RemindMe</h2>
                     <p class="why-intro">
                         Life is busy, and important document expiry dates are easy to forget. 
                         But the consequences of missing them can be costly and stressful.
@@ -269,7 +268,7 @@ session_start();
                 </div>
                 <div class="why-visual">
                     <div class="problem-card">
-                        <h4>❌ Without ReMindMe</h4>
+                        <h4>❌ Without RemindMe</h4>
                         <ul>
                             <li>Missed renewal deadlines</li>
                             <li>Late fees and penalties</li>
@@ -279,7 +278,7 @@ session_start();
                         </ul>
                     </div>
                     <div class="solution-card">
-                        <h4>✅ With ReMindMe</h4>
+                        <h4>✅ With RemindMe</h4>
                         <ul>
                             <li>Timely reminders</li>
                             <li>No late fees</li>
@@ -356,7 +355,7 @@ session_start();
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About ReMindMe</h2>
+                    <h2>About RemindMe</h2>
                     <p>
                         ReMindMe is a web-based document expiry reminder system designed to help individuals 
                         and families keep track of important document expiration dates. Whether it's your 
@@ -397,7 +396,7 @@ session_start();
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Never Miss an Expiry Date Again?</h2>
-                <p>Join thousands of users who trust ReMindMe to keep their documents organized</p>
+                <p>Join thousands of users who trust RemindMe to keep their documents organized</p>
                 <div class="cta-actions">
                     <a href="register.php" class="btn-cta-primary">
                         <i class="fas fa-user-plus"></i> Create Free Account
@@ -415,7 +414,7 @@ session_start();
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ReMindMe</h3>
+                    <h3>RemindMe</h3>
                     <p>Your trusted document expiry reminder system. Never miss an important date again.</p>
                 </div>
                 <div class="footer-section">
@@ -443,7 +442,7 @@ session_start();
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <?php echo date("Y"); ?> ReMindMe. All rights reserved. Built with ❤️ for better document management.</p>
+                <p>&copy; <?php echo date("Y"); ?> RemindMe. All rights reserved. Built with ❤️ for better document management.</p>
             </div>
         </div>
     </footer>
