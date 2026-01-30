@@ -912,3 +912,95 @@ section {
     }
 }
 
+/* Galaxy S8+ / narrow device fix: remove right margin and overflow */
+@media screen and (max-width: 412px) {
+    * {
+        max-width: 100% !important;
+    }
+
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar,
+    .nav-container,
+    .container,
+    .hero,
+    .hero-container,
+    section {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 2rem 10px !important;
+    }
+
+    .nav-container {
+        padding: 0.8rem 10px !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        flex-shrink: 1;
+        min-width: 0;
+        font-size: 1.1rem;
+    }
+
+    .nav-actions {
+        min-width: 0;
+        flex-shrink: 1;
+        margin-left: auto;
+    }
+
+    .nav-actions .btn-register {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+        max-width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .cta-section {
+        padding: 2rem 10px !important;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    
+    .hero {
+        padding: 1.5rem 10px !important;
+        margin-top: 80px;
+    }
+
+    .hero-container {
+        gap: 1.5rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
