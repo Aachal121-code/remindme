@@ -357,13 +357,13 @@ session_start();
                 <div class="about-text">
                     <h2>About RemindMe</h2>
                     <p>
-                        ReMindMe is a web-based document expiry reminder system designed to help individuals 
+                        RemindMe is a web-based document expiry reminder system designed to help individuals 
                         and families keep track of important document expiration dates. Whether it's your 
                         driver's license, passport, insurance policies, warranty cards, vehicle registration, 
-                        or educational certificates, ReMindMe ensures you never miss a renewal deadline.
+                        or educational certificates, RemindMe ensures you never miss a renewal deadline.
                     </p>
                     <p>
-                        Built with modern web technologies (PHP, MySQL, HTML5, CSS3, JavaScript), ReMindMe 
+                        Built with modern web technologies (PHP, MySQL, HTML5, CSS3, JavaScript), RemindMe 
                         offers a clean, intuitive interface that's easy to use for everyone. Our mission is 
                         to help you stay organized, avoid penalties, and maintain peace of mind when it comes 
                         to managing your important documents.
