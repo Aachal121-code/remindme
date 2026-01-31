@@ -8,13 +8,12 @@ body, html {
     font: 100% 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1f2540 0%, #241c2c 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 h1 {
@@ -40,7 +39,7 @@ h1 {
 #email-input, #password-input {
     width: 100%;
     padding: 8px 0;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
 }
 
 #email-input input, #password-input input {
@@ -72,7 +71,7 @@ h1 {
     font-size: 0.95rem;
     font-weight: 600;
     color: #475569;
-    margin-bottom: 0;
+    margin-bottom: 6px;
 }
 
 #login-button {
