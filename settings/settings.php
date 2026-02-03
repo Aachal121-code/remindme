@@ -1,10 +1,8 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../login.php");
-    exit;
-}
 
+require_once '../session_check.php';
+
+require_once '../popup.php'; 
 // page can be 'menu', 'profile', 'security', 'preference', 'privacy', 'about'
 $page = $_GET['page'] ?? 'menu';
 ?>
@@ -37,15 +35,6 @@ $page = $_GET['page'] ?? 'menu';
     <!-- Content -->
     <main class="settings-content">
         <?php
-        // Show flash messages
-        if (!empty($_SESSION['error'])) {
-            echo '<div class="toast error">' . $_SESSION['error'] . '</div>';
-            unset($_SESSION['error']);
-        }
-        if (!empty($_SESSION['success'])) {
-            echo '<div class="toast success">' . $_SESSION['success'] . '</div>';
-            unset($_SESSION['success']);
-        }
         
         $allowed = ['menu','profile','security','preference','privacy','about'];
         if (!in_array($page, $allowed)) {
