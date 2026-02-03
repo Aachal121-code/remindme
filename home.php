@@ -1,5 +1,7 @@
 <?php
-session_start();
+
+require_once 'session_check.php';
+require_once 'popup.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,18 +12,8 @@ session_start();
     <title>Welcome to RemindMe</title>
     <link rel="stylesheet" href="assets/css/Home.css">
 </head>
-<?php
 
-if (!empty($_SESSION['error'])) {
-    echo '<div class="toast error">'.$_SESSION['error'].'</div>';
-    unset($_SESSION['error']);
-}
 
-if (!empty($_SESSION['success'])) {
-    echo '<div class="toast success">'.$_SESSION['success'].'</div>';
-    unset($_SESSION['success']);
-}
-?>
 <body>
 
 <header class="site-header">

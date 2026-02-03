@@ -1,9 +1,6 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit;
-}
+require_once 'session_check.php';
+require_once 'popup.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -13,21 +10,9 @@ if (!isset($_SESSION['user_id'])) {
     <title>Add Document - ReMindMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/add_document.css">
+    <link rel="stylesheet" href="assets/css/flash.css">
 </head>
 <body>
-    
-    <?php
-
-if (!empty($_SESSION['error'])) {
-    echo '<div class="toast error">'.$_SESSION['error'].'</div>';
-    unset($_SESSION['error']);
-}
-
-if (!empty($_SESSION['success'])) {
-    echo '<div class="toast success">'.$_SESSION['success'].'</div>';
-    unset($_SESSION['success']);
-}
-?>
 
 <div class="add-doc-container">
     <a href="dashboard.php" class="back-btn">← Back</a>

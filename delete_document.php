@@ -1,11 +1,8 @@
 <?php
-session_start();
+
+require_once 'session_check.php';
 require_once('config/db_connect.php');
 
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit;
-}
 
 if (!isset($_GET['id'])) {
     $_SESSION['error'] = 'Invalid request.';

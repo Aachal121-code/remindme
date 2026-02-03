@@ -1,7 +1,9 @@
 <?php
+require_once 'session_check.php';
 require_once('config/db_connect.php');
 require_once 'dashboard_status.php';
 require_once 'upcoming_expiry.php';
+require_once 'popup.php'; 
 
 $user_id = $_SESSION['user_id'];
 
@@ -25,19 +27,6 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="assets/css/Dashboard.css" type="text/css">
     <title>RemindMe - dashboard</title>
 </head>
-<?php
-
-if (!empty($_SESSION['error'])) {
-    echo '<div class="toast error">'.$_SESSION['error'].'</div>';
-    unset($_SESSION['error']);
-}
-
-if (!empty($_SESSION['success'])) {
-    echo '<div class="toast success">'.$_SESSION['success'].'</div>';
-    unset($_SESSION['success']);
-}
-?>
-
 
 
 <body>

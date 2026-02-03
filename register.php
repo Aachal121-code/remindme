@@ -13,15 +13,7 @@
     <?php
 session_start();
 
-if (!empty($_SESSION['error'])) {
-    echo '<div class="form-message error">' . $_SESSION['error'] . '</div>';
-    unset($_SESSION['error']);
-}
-
-if (!empty($_SESSION['success'])) {
-    echo '<div class="form-message success">' . $_SESSION['success'] . '</div>';
-    unset($_SESSION['success']);
-}
+require_once 'popup.php'; 
 
 $old_input = $_SESSION['old_input'] ?? [];
 ?>

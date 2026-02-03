@@ -1,5 +1,5 @@
 <?php
-
+require_once 'session_check.php';
 require_once 'config/db_connect.php';
 
 $user_id = $_SESSION['user_id'];
