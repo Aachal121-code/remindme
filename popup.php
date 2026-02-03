@@ -10,7 +10,8 @@ if (!empty($_SESSION['success'])) {
 }
 ?>
 <style>
-    .toast {
+   /* success and error message styles */
+.toast {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -26,13 +27,29 @@ if (!empty($_SESSION['success'])) {
     animation: slideIn 0.4s ease, fadeOut 0.5s ease 2.5s forwards;
 }
 
-/* Success */
 .toast.success {
     background: linear-gradient(135deg, #2ecc71, #27ae60);
 }
 
-/* Error */
 .toast.error {
     background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
 }
 </style>
