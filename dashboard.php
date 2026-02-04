@@ -24,7 +24,7 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/Dashboard.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/dashboard.css" type="text/css">
     <title>RemindMe - dashboard</title>
 </head>
 
@@ -83,55 +83,43 @@ $result = $stmt->get_result();
                 <h2>Your Documents</h2>
                 <div class="documents" id="documentList">
                     <!-- <p>No documents added yet.</p> -->
-                    <table class="document-table">
-                        <thead>
-                            <tr>
-                                <th>Document</th>
-                                <th>Type</th>
-                                <th>Expiry</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php if ($result->num_rows > 0): ?>
-                                <?php while ($row = $result->fetch_assoc()): ?>
-                                    <tr>
-                                        <td><?php echo htmlspecialchars($row['doc_name']); ?></td>
-                                        <td><?php echo htmlspecialchars($row['category']); ?></td>
-                                        <td><?php echo date('d-m-Y', strtotime($row['expiry_date'])); ?></td>
+                    <div class="documents-grid">
+                        <?php while ($row = $result->fetch_assoc()): ?>
+                            <?php
+                                $today = date('Y-m-d');
+                                $diff = (strtotime($row['expiry_date']) - strtotime($today)) / (60*60*24);
 
-                                        <td>
-                                            <?php
-                                            $today = date('Y-m-d');
-                                            $diff = (strtotime($row['expiry_date']) - strtotime($today)) / (60*60*24);
+                                if ($diff < 0) {
+                                    $status = 'expired';
+                                    $statusText = 'Expired';
+                                } elseif ($diff <= 30) {
+                                    $status = 'soon';
+                                    $statusText = 'Expiring Soon';
+                                } else {
+                                    $status = 'valid';
+                                    $statusText = 'Valid';
+                                }
+                            ?>
 
-                                            if ($diff < 0) {
-                                                echo '<span class="status expired">❌ Expired</span>';
-                                            } elseif ($diff <= 30) {
-                                                echo '<span class="status soon">⚠️ Expiring Soon</span>';
-                                            } else {
-                                                echo '<span class="status valid">✔ Valid</span>';
-                                            }
-                                            ?>
-                                        </td>
+                            <div class="doc-card">
+                                <span class="status-pill <?= $status ?>"><?= $statusText ?></span>
 
-                                        <td class="actions">
-                                            <a href="view_document.php?id=<?php echo $row['id']; ?>">👁️</a>
-                                            <a href="edit_document.php?id=<?php echo $row['id']; ?>">✏️</a>
-                                            <a href="delete_document.php?id=<?php echo $row['id']; ?>" 
-                                            onclick="return confirm('Delete this document?')">🗑️</a>
-                                        </td>
-                                    </tr>
-                                <?php endwhile; ?>
-                            <?php else: ?>
-                                <tr>
-                                    <td colspan="5" style="text-align:center;">No documents added yet.</td>
-                                </tr>
-                            <?php endif; ?>
-                        </tbody>
+                                <h3><?= htmlspecialchars($row['doc_name']) ?></h3>
+                                <p class="doc-type"><?= htmlspecialchars($row['category']) ?></p>
+                                <p class="doc-expiry">
+                                    Expiry: <?= date('d M Y', strtotime($row['expiry_date'])) ?>
+                                </p>
 
-                    </table>
+                                <div class="doc-actions">
+                                    <a href="view_document.php?id=<?= $row['id'] ?>" aria-label="View">👁️</a>
+                                    <a href="edit_document.php?id=<?= $row['id'] ?>" aria-label="Edit">✏️</a>
+                                    <a href="delete_document.php?id=<?= $row['id'] ?>"
+                                    onclick="return confirm('Delete this document?')" aria-label="Delete">🗑️</a>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+
                 </div>
             </div>    
 
