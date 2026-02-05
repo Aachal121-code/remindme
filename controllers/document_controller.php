@@ -1,25 +1,27 @@
 <?php
-session_start();
-require_once('../config/db_connect.php');
+require_once '../session_check.php';
+require_once '../config/db_connect.php';
 
-if (!isset($_SESSION['user_id'])) {
-    header('Location: ../login.php');
+$user_id = $_SESSION['user_id'];
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: ../dashboard.php');
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+$doc_name    = trim($_POST['doc_name']);
+$category    = trim($_POST['category']);
+$expiry_date = $_POST['expiry_date'];
+$notes       = trim($_POST['notes'] ?? null);
+
+// basic validation
+if (empty($doc_name) || empty($category) || empty($expiry_date)) {
+    $_SESSION['error'] = 'All required fields must be filled.';
     header('Location: ../add_document.php');
     exit;
 }
 
-$user_id = $_SESSION['user_id'];
-$doc_name = trim($_POST['doc_name']);
-$category = $_POST['category'];
-$expiry_date = $_POST['expiry_date'];
-$notes = trim($_POST['notes'] ?? '');
-
-$image_path = null;
-
+// ---------- FILE UPLOAD ----------
 /* ---------- BASIC VALIDATION ---------- */
 if (!empty($_FILES['document_file']['name'])) {
 
@@ -62,10 +64,11 @@ if (!empty($_FILES['document_file']['name'])) {
 }
 
 
-/* ---------- INSERT INTO DATABASE ---------- */
+// ---------- INSERT ----------
 $stmt = $conn->prepare("
-    INSERT INTO documents (user_id, doc_name, category, expiry_date, image_path, notes)
-    VALUES (?, ?, ?, ?, ?, ?)
+    INSERT INTO documents 
+    (user_id, doc_name, category, expiry_date, image_path, notes, reminder_30_sent, reminder_7_sent)
+    VALUES (?, ?, ?, ?, ?, ?, 0, 0)
 ");
 
 $stmt->bind_param(
@@ -78,33 +81,8 @@ $stmt->bind_param(
     $notes
 );
 
-if ($stmt->execute()) {
+$stmt->execute();
 
-    require_once __DIR__ . '/../mail/mail_config.php';
-    require_once __DIR__ . '/../mail/mail_sending.php'; // contains sendReminder() function
-
-    // Fetch newly added document info
-    $newDocId = $stmt->insert_id;
-    $newDoc = [
-        'id' => $newDocId,
-        'doc_name' => $doc_name,
-        'expiry_date' => $expiry_date,
-        'name' => $_SESSION['user_name'],
-        'email' => $_SESSION['user_email'] ?? '', // ensure this is stored in session
-        'reminder_30_sent' => 0,
-        'reminder_7_sent' => 0
-    ];
-
-    // Send test email immediately (for new document)
-    sendReminder($newDoc, 30); 
-    sendReminder($newDoc, 7);
-
-    $_SESSION['success'] = 'Document added successfully!';
-    header('Location: ../dashboard.php');
-    exit;
-}
-
-$_SESSION['error'] = 'Something went wrong. Try again.';
-header('Location: ../add_document.php');
+$_SESSION['success'] = 'Document added successfully.';
+header('Location: ../dashboard.php');
 exit;
-?>
