@@ -60,11 +60,6 @@ require_once 'popup.php';
 </form>
 
 </div>
-    <script>
-    setTimeout(() => {
-        document.querySelectorAll('.toast').forEach(el => el.remove());
-    }, 5000);
-</script>
 
 </body>
 </html>
