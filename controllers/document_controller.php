@@ -26,7 +26,7 @@ if (empty($doc_name) || empty($category) || empty($expiry_date)) {
 if (!empty($_FILES['document_file']['name'])) {
 
     $allowed_ext = ['jpg', 'jpeg', 'png'];
-    $max_size = 2 * 1024 * 1024; // 2MB
+    $max_size = 5 * 1024 * 1024; // 5MB
 
     $file_name = $_FILES['document_file']['name'];
     $file_size = $_FILES['document_file']['size'];
@@ -41,7 +41,7 @@ if (!empty($_FILES['document_file']['name'])) {
     }
 
     if ($file_size > $max_size) {
-        $_SESSION['error'] = 'File size must be less than 2MB.';
+        $_SESSION['error'] = 'File size must be less than 5MB.';
         header('Location: ../add_document.php');
         exit;
     }
