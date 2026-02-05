@@ -87,7 +87,7 @@ require_once 'popup.php';
 
 <footer class="site-footer">
     <div class="container center">
-        <p>&copy; <?php echo date("Y"); ?> ReMindMe. All rights reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?> RemindMe. All rights reserved.</p>
     </div>
 </footer>
 
