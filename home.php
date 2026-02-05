@@ -10,7 +10,7 @@ require_once 'popup.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to RemindMe</title>
-    <link rel="stylesheet" href="assets/css/Home.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 
 
@@ -18,7 +18,7 @@ require_once 'popup.php';
 
 <header class="site-header">
     <div class="header-inner">
-        <a href="home.php" class="logo">RemindMe</a>
+        <a href="home.php" class="logo">Remind<span>Me</span></a>
     </div>
 </header>
 

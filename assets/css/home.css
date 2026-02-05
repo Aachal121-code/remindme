@@ -253,13 +253,16 @@ html, body {
 }
 
 .logo{
+    font-size: 24px;
     font-weight: 700;
-    color: var(--text);
+    color: rgb(13, 5, 127);
+    white-space: nowrap;
     text-decoration: none;
-    font-size: 20px;
-    letter-spacing: 0.4px;
 }
 
+.logo span {
+    color: #0909cc;
+}
 /* footer */
 .site-footer{
     margin-top: 36px;
