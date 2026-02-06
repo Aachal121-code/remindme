@@ -24,8 +24,8 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/dashboard.css" type="text/css">
-    <title>RemindMe - dashboard</title>
+    <link rel="stylesheet" href="assets/css/Dashboard.css" type="text/css">
+    <title>RenewMe - dashboard</title>
 </head>
 
 
@@ -33,7 +33,7 @@ $result = $stmt->get_result();
     <section class="dashboard">
         <div class="navbar">
             <div class="logo">
-                <p>Remind<span>Me</span></p>
+                <img src="assets/logo.png" alt="RenewMe Logo" class="logo">
             </div>
             <div class="nav-actions">
                 <div class="addDocument">

@@ -48,7 +48,7 @@ function sendReminder($doc, $days) {
         <p>Your document <b>{$doc['doc_name']}</b> expires in <b>{$days} days</b>.</p>
         <p>Expiry Date: {$doc['expiry_date']}</p>
         <p>Please renew it before the expiry date to avoid any inconvenience.</p>
-        <p>— RemindMe Team</p>
+        <p>— RenewMe Team</p>
     ";
     return $mail->send();
 }

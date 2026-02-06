@@ -7,7 +7,7 @@ require_once 'popup.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add Document - ReMindMe</title>
+    <title>Add Document - RenewMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/add_document.css">
     <link rel="stylesheet" href="assets/css/flash.css">

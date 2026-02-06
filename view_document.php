@@ -32,7 +32,7 @@ $doc = $result->fetch_assoc();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View Document - ReMindMe</title>
+    <title>View Document - RenewMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/view_document.css">
 </head>
