@@ -6,8 +6,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RemindMe</title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <title>RenewMe</title>
+    <link rel="stylesheet" href="assets/css/Index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -15,7 +15,7 @@ session_start();
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-text">RemindMe</span>
+                <img src="assets/logo.png" alt="RenewMe Logo" class="logo">
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
@@ -38,7 +38,7 @@ session_start();
                     <span class="highlight">Document Expiry Date</span> Again
                 </h1>
                 <p class="hero-description">
-                    RemindMe is your personal document expiry reminder system. Track documents, 
+                    RenewMe is your personal document expiry reminder system. Track documents, 
                     warranty cards, licenses, insurance, and more. Get automatic reminders 
                     before expiry dates and keep everything organized in one secure place.
                 </p>
@@ -175,7 +175,7 @@ session_start();
     <section id="advantages" class="advantages-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose RemindMe?</h2>
+                <h2 class="section-title">Why Choose RenewMe?</h2>
                 <p class="section-subtitle">The advantages that make us the best choice for document management</p>
             </div>
             <div class="advantages-grid">
@@ -230,7 +230,7 @@ session_start();
         <div class="container">
             <div class="why-content">
                 <div class="why-text">
-                    <h2>Why You Need RemindMe</h2>
+                    <h2>Why You Need RenewMe</h2>
                     <p class="why-intro">
                         Life is busy, and important document expiry dates are easy to forget. 
                         But the consequences of missing them can be costly and stressful.
@@ -240,7 +240,7 @@ session_start();
                             <i class="fas fa-exclamation-triangle"></i>
                             <div>
                                 <h4>Avoid Fines & Penalties</h4>
-                                <p>Late renewals often result in hefty fines. ReMindMe ensures you renew on time.</p>
+                                <p>Late renewals often result in hefty fines. RenewMe ensures you renew on time.</p>
                             </div>
                         </div>
                         <div class="why-item">
@@ -268,7 +268,7 @@ session_start();
                 </div>
                 <div class="why-visual">
                     <div class="problem-card">
-                        <h4>❌ Without RemindMe</h4>
+                        <h4>❌ Without RenewMe</h4>
                         <ul>
                             <li>Missed renewal deadlines</li>
                             <li>Late fees and penalties</li>
@@ -278,7 +278,7 @@ session_start();
                         </ul>
                     </div>
                     <div class="solution-card">
-                        <h4>✅ With RemindMe</h4>
+                        <h4>✅ With RenewMe</h4>
                         <ul>
                             <li>Timely reminders</li>
                             <li>No late fees</li>
@@ -355,15 +355,15 @@ session_start();
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About RemindMe</h2>
+                    <h2>About RenewMe</h2>
                     <p>
-                        RemindMe is a web-based document expiry reminder system designed to help individuals 
+                        RenewMe is a web-based document expiry reminder system designed to help individuals 
                         and families keep track of important document expiration dates. Whether it's your 
                         driver's license, passport, insurance policies, warranty cards, vehicle registration, 
-                        or educational certificates, RemindMe ensures you never miss a renewal deadline.
+                        or educational certificates, RenewMe ensures you never miss a renewal deadline.
                     </p>
                     <p>
-                        Built with modern web technologies (PHP, MySQL, HTML5, CSS3, JavaScript), RemindMe 
+                        Built with modern web technologies (PHP, MySQL, HTML5, CSS3, JavaScript), RenewMe 
                         offers a clean, intuitive interface that's easy to use for everyone. Our mission is 
                         to help you stay organized, avoid penalties, and maintain peace of mind when it comes 
                         to managing your important documents.
@@ -396,7 +396,7 @@ session_start();
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Never Miss an Expiry Date Again?</h2>
-                <p>Join thousands of users who trust RemindMe to keep their documents organized</p>
+                <p>Join thousands of users who trust RenewMe to keep their documents organized</p>
                 <div class="cta-actions">
                     <a href="register.php" class="btn-cta-primary">
                         <i class="fas fa-user-plus"></i> Create Free Account
@@ -414,7 +414,7 @@ session_start();
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>RemindMe</h3>
+                    <h3>RenewMe</h3>
                     <p>Your trusted document expiry reminder system. Never miss an important date again.</p>
                 </div>
                 <div class="footer-section">
@@ -442,7 +442,7 @@ session_start();
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <?php echo date("Y"); ?> RemindMe. All rights reserved. Built with ❤️ for better document management.</p>
+                <p>&copy; <?php echo date("Y"); ?> RenewMe. All rights reserved. Built with ❤️ for better document management.</p>
             </div>
         </div>
     </footer>

@@ -9,8 +9,8 @@ require_once 'popup.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to RemindMe</title>
-    <link rel="stylesheet" href="assets/css/home.css">
+    <title>Welcome to RenewMe</title>
+    <link rel="stylesheet" href="assets/css/Home.css">
 </head>
 
 
@@ -18,7 +18,9 @@ require_once 'popup.php';
 
 <header class="site-header">
     <div class="header-inner">
-        <a href="home.php" class="logo">Remind<span>Me</span></a>
+        <div class="logo">
+            <img src="assets/logo.png" alt="RenewMe Logo" class="logo">
+        </div>
     </div>
 </header>
 
@@ -27,7 +29,7 @@ require_once 'popup.php';
     <div class="content">
             <div class="left">
             <h1>Never Forget Important Documents — Secure & Private</h1>
-            <p>ReMindMe helps you keep documents organized, receive simple reminders, and protects your data with privacy-first storage.</p>
+            <p>RenewMe helps you keep documents organized, receive simple reminders, and protects your data with privacy-first storage.</p>
 
             <ul class="features">
                 <li>Encrypted document storage</li>
@@ -87,7 +89,7 @@ require_once 'popup.php';
 
 <footer class="site-footer">
     <div class="container center">
-        <p>&copy; <?php echo date("Y"); ?> RemindMe. All rights reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?> RenewMe. All rights reserved.</p>
     </div>
 </footer>
 

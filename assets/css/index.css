@@ -1,4 +1,4 @@
-/* ReMindMe Landing Page Styles */
+/* RenewMe Landing Page Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -65,17 +65,30 @@ body {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    text-decoration: none;
+    height: 50px;              /* navbar ke liye perfect */
+    width: auto;
+    object-fit: contain;
+    display: block;
+
+    /* magic */
+    mix-blend-mode: multiply;
+
+    /* smoothness */
+    filter: contrast(1.05) saturate(1.05);
+
+    /* hover polish */
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.logo-icon {
-    font-size: 1.8rem;
+.logo:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 36px;
+    }
 }
 
 .nav-links {

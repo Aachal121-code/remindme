@@ -36,15 +36,31 @@ body, html {
 }
 
 
-.logo p {
-    font-size: 24px;
-    font-weight: 700;
-    color: rgb(13, 5, 127);
-    white-space: nowrap;
+.logo {
+    height: 50px;              /* navbar ke liye perfect */
+    width: auto;
+    object-fit: contain;
+    display: block;
+
+    /* magic */
+    mix-blend-mode: multiply;
+
+    /* smoothness */
+    filter: contrast(1.05) saturate(1.05);
+
+    /* hover polish */
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.logo p span {
-    color: #0909cc;
+.logo:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 36px;
+    }
 }
 
 .addDocument button {
@@ -293,7 +309,7 @@ body, html {
 ================================ */
 .doc-card {
     position: relative;
-    background: rgb(240, 240, 241);
+    background: white;
     border-radius: 14px;
     padding: 16px;
     box-shadow: 0 8px 22px rgba(0,0,0,0.08);
