@@ -21,8 +21,8 @@ if (empty($doc_name) || empty($category) || empty($expiry_date)) {
     exit;
 }
 
-// ---------- FILE UPLOAD ----------
-/* ---------- BASIC VALIDATION ---------- */
+//  FILE UPLOAD 
+/* BASIC VALIDATION*/
 if (!empty($_FILES['document_file']['name'])) {
 
     $allowed_ext = ['jpg', 'jpeg', 'png'];
@@ -64,7 +64,7 @@ if (!empty($_FILES['document_file']['name'])) {
 }
 
 
-// ---------- INSERT ----------
+// INSERT 
 $stmt = $conn->prepare("
     INSERT INTO documents 
     (user_id, doc_name, category, expiry_date, image_path, notes, reminder_30_sent, reminder_7_sent)

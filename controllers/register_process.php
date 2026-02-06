@@ -16,7 +16,7 @@ $confirm_password = $_POST['confirm_password'] ?? '';
 // Store old input for sticky form
 $_SESSION['old_input'] = ['name'=>$name, 'email'=>$email];
 
-// ---------------- Validation ----------------
+// Validation 
 if (empty($name) || empty($email) || empty($password) || empty($confirm_password)) {
     $_SESSION['error'] = 'All fields are required.';
     header('Location: ../register.php');

@@ -14,7 +14,7 @@ $password = $_POST['password'] ?? '';
 // Store old input for sticky form
 $_SESSION['old_input'] = ['email' => $email];
 
-// ---------------- Validation ----------------
+// Validation 
 if (empty($email) || empty($password)) {
     $_SESSION['error'] = 'Email and password are required.';
     header('Location: ../login.php');
