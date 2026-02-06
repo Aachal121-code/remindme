@@ -13,7 +13,7 @@ if (!isset($_GET['id'])) {
 $user_id = $_SESSION['user_id'];
 $doc_id  = (int) $_GET['id'];
 
-/* 1️⃣ Fetch image path first */
+/* Fetch image path first */
 $stmt = $conn->prepare("
     SELECT image_path 
     FROM documents 
@@ -31,16 +31,16 @@ if ($result->num_rows === 0) {
 
 $doc = $result->fetch_assoc();
 
-/* 2️⃣ Delete image file if exists */
+/* Delete image file if exists */
 if (!empty($doc['image_path'])) {
     $filePath = $doc['image_path'];
 
     if (file_exists($filePath)) {
-        unlink($filePath); // 🔥 deletes uploaded image
+        unlink($filePath);
     }
 }
 
-/* 3️⃣ Delete database record */
+/* Delete database record */
 $stmt = $conn->prepare("
     DELETE FROM documents 
     WHERE id = ? AND user_id = ?
@@ -53,6 +53,6 @@ if ($stmt->execute()) {
     $_SESSION['error'] = 'Failed to delete document.';
 }
 
-/* 4️⃣ Redirect through router */
+/* Redirect through router */
 header('Location: dashboard_router.php');
 exit;

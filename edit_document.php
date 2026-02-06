@@ -6,7 +6,7 @@ require_once 'config/db_connect.php';
 
 $user_id = $_SESSION['user_id'];
 
-/* ---------------- FETCH DOCUMENT ---------------- */
+/*FETCH DOCUMENT */
 if (!isset($_GET['id'])) {
     header('Location: dashboard.php');
     exit;
@@ -27,7 +27,7 @@ if ($result->num_rows === 0) {
 
 $doc = $result->fetch_assoc();
 
-/* ---------------- UPDATE DOCUMENT ---------------- */
+/*UPDATE DOCUMENT */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $doc_name    = trim($_POST['doc_name']);
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $image_path = $doc['image_path'];
 
-    /* ---- FILE UPLOAD (OPTIONAL) ---- */
+    /*FILE UPLOAD \ */
     if (!empty($_FILES['document_file']['name'])) {
 
         $allowed = ['jpg','jpeg','png'];
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $image_path = $upload_dir . $new_name;
     }
 
-    /* ---- UPDATE QUERY ---- */
+    /*UPDATE QUERY */
     $stmt = $conn->prepare("
         UPDATE documents 
         SET doc_name=?, category=?, expiry_date=?, image_path=?, notes=?
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="form-group">
-            <label>Replace Document (optional)</label>
+            <label>Replace Document</label>
             <input type="file" name="document_file">
         </div>
 

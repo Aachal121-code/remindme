@@ -24,7 +24,7 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/Dashboard.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/dashboard.css" type="text/css">
     <title>RenewMe - dashboard</title>
 </head>
 
@@ -82,7 +82,6 @@ $result = $stmt->get_result();
             <div class="document-list">
                 <h2>Your Documents</h2>
                 <div class="documents" id="documentList">
-                    <!-- <p>No documents added yet.</p> -->
                     <div class="documents-grid">
                         <?php while ($row = $result->fetch_assoc()): ?>
                             <?php
@@ -131,7 +130,7 @@ $result = $stmt->get_result();
     setTimeout(() => {
         document.querySelectorAll('.toast').forEach(el => el.remove());
     }, 3000);
-</script>
+    </script>
 
 
 </body>

@@ -5,7 +5,7 @@ session_start();
 if (isset($_POST['confirm']) && $_POST['confirm'] === 'yes') {
     session_unset();
     session_destroy();
-    header("Location: login.php");
+    header("Location: index.php");
     exit;
 }
 ?>
