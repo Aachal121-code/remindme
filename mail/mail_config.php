@@ -12,12 +12,12 @@ function getMailer() {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'remindme.alerts@gmail.com';   // your app email
-    $mail->Password   = 'retk fbpg mglz fdre';        // Gmail App Password
+    $mail->Username   = 'renewme.notify@gmail.com';   // your app email
+    $mail->Password   = 'ftxr madf pgoc phwq';        // Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
     
-    $mail->setFrom('remindme.alerts@gmail.com', 'RemindMe');
+    $mail->setFrom('renewme.notify@gmail.com', 'RenewMe');
     $mail->isHTML(true);
     return $mail;
 }
