@@ -3,19 +3,19 @@
 ?>
 
 <div class="about-section">
-    <h2>About RemindMe</h2>
+    <h2>About RenewMe</h2>
 
     <div class="about-card">
         <h3>Application Info</h3>
-        <p><strong>App Name:</strong> RemindMe</p>
+        <p><strong>App Name:</strong> RenewMe</p>
         <p><strong>Version:</strong> 1.0.0</p>
         <p><strong>Platform:</strong> Web & Mobile</p>
-        <p><strong>Created & Developed By:</strong> RemindMe Team</p>
+        <p><strong>Created & Developed By:</strong> RenewMe Team</p>
     </div>
 
     <div class="about-card">
         <h3>Purpose</h3>
-        <p>RemindMe helps users track expiry dates of important documents and receive timely reminders, ensuring no renewal is missed.</p>
+        <p>RenewMe helps users track expiry dates of important documents and receive timely reminders, ensuring no renewal is missed.</p>
     </div>
 
     <div class="about-card">
@@ -40,7 +40,7 @@
 
     <div class="about-card">
         <h3>Support</h3>
-        <p><strong>Email:</strong> remindme.alert@gmail.com</p>
+        <p><strong>Email:</strong> RenewMe.alert@gmail.com</p>
         <p>Response Time: 24–48 hours</p>
     </div>
 

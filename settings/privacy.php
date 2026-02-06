@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $export = ['user' => $usr, 'documents' => $docs];
         header('Content-Type: application/json');
-        header('Content-Disposition: attachment; filename="remindme_export_' . $_SESSION['user_id'] . '.json"');
+        header('Content-Disposition: attachment; filename="RenewMe_export_' . $_SESSION['user_id'] . '.json"');
         echo json_encode($export, JSON_PRETTY_PRINT);
         exit;
     }
