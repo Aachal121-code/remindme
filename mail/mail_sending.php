@@ -1,5 +1,4 @@
 <?php
-// ===== CRON ONLY =====
 if (php_sapi_name() !== 'cli') {
     exit;
 }
