@@ -1,5 +1,5 @@
 <?php
-// Security: change password and toggle two-factor (stored in session prefs)
+// Security: change password and toggle two-factor 
 require_once __DIR__ . '/../config/db_connect.php';
 $user_id = $_SESSION['user_id'];
 $defaults = ['two_factor' => false];

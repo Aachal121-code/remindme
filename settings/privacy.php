@@ -36,15 +36,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (isset($_POST['delete_account'])) {
-        // Delete user and cascade documents (DB has ON DELETE CASCADE)
-        $stmt = $conn->prepare('DELETE FROM users WHERE id = ?');
-        $stmt->bind_param('i', $_SESSION['user_id']);
+
+        $userId = $_SESSION['user_id'];
+
+        // Fetch all uploaded document paths
+        $stmt = $conn->prepare(
+            "SELECT image_path FROM documents WHERE user_id = ?"
+        );
+        $stmt->bind_param("i", $userId);
         $stmt->execute();
+        $result = $stmt->get_result();
+
+        //Delete files from filesystem
+        while ($row = $result->fetch_assoc()) {
+            if (!empty($row['image_path'])) {
+                $filePath = __DIR__ . '/../' . $row['image_path'];
+
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+        }
+        $stmt->close();
+
+        // Delete user record (documents will be auto-deleted if foreign key with ON DELETE CASCADE is set)
+        $stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
+        $stmt->bind_param("i", $userId);
+        $stmt->execute();
+        $stmt->close();
+
+        // Destroy session
         session_unset();
         session_destroy();
-        header('Location: ../register.php');
+
+        header('Location: ../index.php?account_deleted=1');
         exit;
     }
+
 }
 ?>
 <?php

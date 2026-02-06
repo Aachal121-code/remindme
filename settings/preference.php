@@ -9,7 +9,7 @@ if (!empty($_SESSION['prefs'][$user_id]) && is_array($_SESSION['prefs'][$user_id
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_prefs'])) {
     $prefs['email_notifications'] = isset($_POST['email_notifications']) ? true : false;
-    // Save into session (removing per-user JSON files)
+    // Save into session
     $_SESSION['prefs'][$user_id] = $prefs;
     $_SESSION['success'] = 'Preferences saved.';
     header('Location: settings.php?page=preference');

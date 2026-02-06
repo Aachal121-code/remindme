@@ -1,6 +1,3 @@
-<?php
-    
-?>
 
 <div class="about-section">
     <h2>About RenewMe</h2>
