@@ -47,7 +47,7 @@ body {
     color: white !important;
 }
 
-/* Menu cards (shown on menu page, and good for mobile) */
+/* Menu cards */
 .settings-menu {
     display: flex;
     flex-direction: column;
@@ -75,16 +75,46 @@ body {
 }
 
 /* Improved card spacing */
-.card label { display:block; margin-top:8px; font-weight:600 }
-.card input[type="text"], .card input[type="email"], .card input[type="password"], .card input[type="file"] { width:100%; padding:8px; margin-top:6px }
-.card button { margin-top:12px; padding:8px 12px }
+.card label { 
+    display:block; 
+    margin-top:8px; 
+    font-weight:600 
+}
+.card input[type="text"], 
+.card input[type="email"], 
+.card input[type="password"], 
+.card input[type="file"] {
+    width:100%; 
+    padding:8px; 
+    margin-top:6px 
+}
+.card button { 
+    margin-top:12px; 
+    padding:8px 12px 
+}
 
 /* Profile specific styles */
 .profile-view { display:block }
-.profile-edit-form input[type="text"], .profile-edit-form input[type="email"] { width:100%; padding:8px; margin-top:6px }
-.edit-profile-btn, .cancel-edit-btn { padding:8px 12px; border-radius:6px; cursor:pointer }
-.edit-profile-btn { background:#0969da; color:#fff; border:none }
-.cancel-edit-btn { background:#eef3f8; border:none }
+.profile-edit-form input[type="text"], 
+.profile-edit-form input[type="email"] {
+    width:100%; 
+    padding:8px; 
+    margin-top:6px 
+}
+.edit-profile-btn, .cancel-edit-btn { 
+    padding:8px 12px; 
+    border-radius:6px; 
+    cursor:pointer 
+}
+.edit-profile-btn { 
+    background:#0969da; 
+    color:#fff; 
+    border:none 
+}
+.cancel-edit-btn { 
+    background:#eef3f8; 
+    border:none 
+}
 
 /* Content */
 .settings-content {

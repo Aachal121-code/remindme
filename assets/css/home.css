@@ -1,4 +1,3 @@
-/* Modern RenewMe homepage styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
@@ -13,8 +12,8 @@
     --bg-1: #eef2ff;
     --bg-2: #f8fafc;
     --card: #ffffff;
-    --accent: #2563eb; /* blue */
-    --accent-2: #06b6d4; /* teal */
+    --accent: #2563eb; 
+    --accent-2: #06b6d4; 
     --muted: #475569;
     --text: #0f172a;
 }
@@ -155,7 +154,7 @@ html, body {
     outline: 3px solid rgba(37,99,235,0.18);
 }
 
-/* Right column card (illustration placeholder) */
+/* Right column card */
 .right-card{
     background: linear-gradient(180deg, rgba(6,182,212,0.06), rgba(37,99,235,0.04));
     border-radius: 12px;
@@ -234,37 +233,31 @@ html, body {
     .cta-btn{ padding: 12px 16px; font-size: 15px; }
 }
 
-/* Header (minimal, non-sticky and left-aligned) */
+/* Header */
 .site-header{
-    position: static; /* allow header to scroll with content */
+    position: static; 
     display: block;
     padding: 18px 24px;
     background: transparent;
-    margin-bottom: 8px; /* spacing between header and hero */
+    margin-bottom: 8px; 
 }
 
 .header-inner{
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto; /* center the container */
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* logo on the left */
+    justify-content: flex-start; 
 }
 
 .logo {
-    height: 50px;              /* navbar ke liye perfect */
+    height: 50px;            
     width: auto;
     object-fit: contain;
     display: block;
-
-    /* magic */
     mix-blend-mode: multiply;
-
-    /* smoothness */
     filter: contrast(1.05) saturate(1.05);
-
-    /* hover polish */
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -331,18 +324,37 @@ html, body {
     color: var(--muted);
 }
 
-.secure-note .lock{ background: rgba(37,99,235,0.12); padding: 6px; border-radius: 8px; }
+.secure-note .lock{ 
+    background: rgba(37,99,235,0.12); 
+    padding: 6px; 
+    border-radius: 8px; 
+}
 
 /* small helpers for content */
-.note{ font-size: 13px; color: var(--muted); margin-top: 10px; }
+.note{ 
+    font-size: 13px; 
+    color: var(--muted); 
+    margin-top: 10px; 
+}
 .illustration{ max-width: 160px; width: 100%; }
-@media (max-width: 480px){ .right-card{ min-height: 190px; padding: 16px; } .actions{ flex-direction: column; align-items: stretch; } .cta-btn{ width: 100%; justify-content: center; } }
+@media (max-width: 480px){
+    .right-card{ 
+        min-height: 190px; 
+        padding: 16px; 
+    } 
+    .actions{ 
+        flex-direction: column; 
+        align-items: stretch; 
+    } 
+    .cta-btn{ 
+        width: 100%; 
+        justify-content: center; 
+    } 
+}
 
 @media (max-width: 900px){
-    /* header is non-sticky; no extra top padding required */
     .site-header{ background: transparent; }
 }
 
-/* small helpers */
 .text-muted{ color: var(--muted); }
 .center{ text-align: center; }

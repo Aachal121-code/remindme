@@ -37,18 +37,12 @@ body, html {
 
 
 .logo {
-    height: 50px;              /* navbar ke liye perfect */
+    height: 50px;             
     width: auto;
     object-fit: contain;
     display: block;
-
-    /* magic */
     mix-blend-mode: multiply;
-
-    /* smoothness */
     filter: contrast(1.05) saturate(1.05);
-
-    /* hover polish */
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -169,6 +163,7 @@ body, html {
 .statusCards .expiringSoon {
     background-color: #fff3cd;
 }
+
 /* Upcoming Expiry Section */
 .expiry-list {
     max-height: 320px;
@@ -183,8 +178,8 @@ body, html {
     font-family: Arial, sans-serif;
 }
 .expiry-list {
-    scrollbar-width: none;      /* Firefox */
-    -ms-overflow-style: none;   /* IE / Edge */
+    scrollbar-width: none;      
+    -ms-overflow-style: none;   
     mask-image: linear-gradient(to bottom, black 90%, transparent);
 }
 .expiry-list::-webkit-scrollbar {
@@ -262,12 +257,12 @@ body, html {
         gap: 8px;
         padding: 8px 12px;
         overflow-x: auto;
-        -ms-overflow-style: none; /* hide scrollbar IE/Edge */
-        scrollbar-width: none; /* hide scrollbar Firefox */
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
     }
 
     .navbar::-webkit-scrollbar {
-        display: none; /* hide scrollbar Chrome/Safari */
+        display: none; 
         height: 0;
     }
 
@@ -294,9 +289,7 @@ body, html {
         font-size: 14px;
     }
 }
-/* ===============================
-   DOCUMENT GRID (4 CARDS PC)
-================================ */
+/* DOCUMENT GRID (4 CARDS PC) */
 .documents-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -304,9 +297,7 @@ body, html {
     padding: 10px;
 }
 
-/* ===============================
-   DOCUMENT CARD
-================================ */
+/* DOCUMENT CARD*/
 .doc-card {
     position: relative;
     background: white;
@@ -321,9 +312,7 @@ body, html {
     box-shadow: 0 14px 30px rgba(0,0,0,0.12);
 }
 
-/* ===============================
-   STATUS PILL (TOP RIGHT)
-================================ */
+/* STATUS PILL (TOP RIGHT)*/
 .status-pill {
     position: absolute;
     top: 10px;
@@ -349,9 +338,7 @@ body, html {
     color: #721c24;
 }
 
-/* ===============================
-   CARD CONTENT
-================================ */
+/* CARD CONTENT */
 .doc-card h3 {
     margin-top: 8px;
     font-size: 17px;
@@ -365,9 +352,7 @@ body, html {
     margin-top: 6px;
 }
 
-/* ===============================
-   ACTIONS (CENTERED)
-================================ */
+/* ACTIONS (CENTERED) */
 .doc-actions {
     display: flex;
     justify-content: center;
@@ -390,9 +375,7 @@ body, html {
     outline: none;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .documents-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -418,7 +401,6 @@ body, html {
     }
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .statusCards {
         display: flex;
