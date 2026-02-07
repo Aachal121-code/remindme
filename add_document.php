@@ -15,7 +15,6 @@ require_once 'popup.php';
 <body>
 
 <div class="add-doc-container">
-    <a href="dashboard.php" class="back-btn">← Back</a>
 
     <h2>Add New Document</h2>
 
