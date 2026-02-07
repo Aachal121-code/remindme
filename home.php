@@ -10,7 +10,7 @@ require_once 'popup.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to RenewMe</title>
-    <link rel="stylesheet" href="assets/css/Home.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 
 
